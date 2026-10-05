@@ -149,23 +149,15 @@
 </head>
 <body class="bg-retro-bg text-charcoal font-sans antialiased selection:bg-pastel-orange selection:text-white flex flex-col min-h-screen relative">
 
-  <!-- ==============================================
-       BARRA DE AVISOS / TOP BAR RETRÔ PASTEL
-  ============================================== -->
   <div class="bg-pastel-orange text-charcoal-800 text-xs font-semibold py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2 border-b border-pastel-orange-hover/30 shadow-xs">
     <span>🐱</span>
-    <span>Bem-vindo ao <strong>NEKO POKE</strong>! Aproveite <strong>10% OFF</strong> no seu primeiro pedido com o cupom: <span class="bg-white/60 px-2 py-0.5 rounded text-charcoal-800 font-mono uppercase font-bold border border-white/80">NEKO10</span></span>
+    <span>Bem-vindo ao <strong>NEKO POKE</strong>! Aproveite <strong>10% OFF</strong> no seu primeiro pedido com o cupom: <span class="bg-white/60 px-2 py-0.5 rounded text-charcoal-800 font-mono">NEKO10</span></span>
     <a href="#delivery" class="underline hover:text-white ml-1 hidden sm:inline transition-colors">Pedir agora →</a>
   </div>
 
-  <!-- ==============================================
-       HEADER / NAVBAR FIXA (PASTEL ORANGE #E8A382)
-  ============================================== -->
   <header class="sticky top-0 z-40 bg-pastel-orange/95 backdrop-blur-md border-b border-pastel-orange-hover shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        
-        <!-- Logotipo NEKO POKE com Mascote Vintage -->
         <a href="#hero" class="flex items-center gap-3.5 group">
           <div class="relative w-12 h-12 rounded-2xl overflow-hidden border-2 border-white shadow-sm group-hover:scale-105 transition-transform bg-white shrink-0">
             <img 
@@ -185,7 +177,6 @@
           </div>
         </a>
 
-        <!-- Links de Navegação -->
         <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold">
           <a href="#hero" class="text-charcoal-800 hover:text-white transition-colors">Início</a>
           <a href="#monte-seu-poke" class="text-charcoal-800 hover:text-white transition-colors flex items-center gap-1.5">
@@ -197,24 +188,20 @@
           <a href="#unidades" class="text-charcoal-800 hover:text-white transition-colors">Unidades</a>
         </nav>
 
-        <!-- Ações do Header: Perfil/Cadastro + Botão Carrinho -->
         <div class="flex items-center gap-3">
-          
-          <!-- Botão de Cadastro / Usuário -->
           <button 
             id="btn-user-profile" 
             onclick="abrirModalUsuario()" 
-            class="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-retro-card border border-retro-border hover:border-pastel-blue text-xs font-semibold text-charcoal hover:text-charcoal-800 shadow-xs transition-all"
+            class="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-retro-card border border-retro-border hover:border-pastel-blue text-xs font-semibold text-charcoal hover:text-charcoal-800 transition-all duration-200"
             title="Minha Conta / Dados de Entrega"
           >
             <span class="w-6 h-6 rounded-full bg-pastel-orange/30 text-charcoal-800 flex items-center justify-center text-xs">👤</span>
             <span id="nav-user-label" class="hidden sm:inline">Entrar / Cadastrar</span>
           </button>
 
-          <!-- Botão Abrir Carrinho (CTA Pastel Blue #88A9C3) -->
           <button 
             onclick="abrirCarrinho()" 
-            class="relative flex items-center gap-2 px-4 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold tracking-wide uppercase shadow-sm transition-transform hover:scale-105 active:scale-95"
+            class="relative flex items-center gap-2 px-4 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold tracking-wide uppercase shadow-sm transition-all duration-200"
             aria-label="Abrir Carrinho"
           >
             <span class="text-base">🛒</span>
@@ -224,19 +211,15 @@
             </span>
           </button>
 
-          <!-- Botão Menu Mobile -->
           <button id="mobile-toggle" type="button" class="lg:hidden text-charcoal-800 hover:text-white p-2 rounded-lg bg-white/40 border border-white/60" aria-label="Abrir Menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
           </button>
-
         </div>
-
       </div>
     </div>
 
-    <!-- Dropdown Mobile -->
     <div id="mobile-nav" class="hidden lg:hidden bg-retro-card border-b border-retro-border px-6 py-5 space-y-4 shadow-lg">
       <a href="#hero" class="mobile-item block text-base font-semibold text-charcoal hover:text-pastel-blue">Início</a>
       <a href="#monte-seu-poke" class="mobile-item block text-base font-semibold text-charcoal hover:text-pastel-blue">Monte Seu Poke</a>
@@ -255,16 +238,12 @@
   </header>
 
   <main class="flex-grow">
-    <!-- ==============================================
-         HERO SECTION RETRÔ PASTEL
-    ============================================== -->
     <section id="hero" class="relative pt-12 pb-20 lg:py-24 overflow-hidden bg-retro-bg">
       <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-pastel-orange/20 blur-[130px] rounded-full pointer-events-none"></div>
       <div class="absolute top-10 right-10 w-[300px] h-[300px] bg-pastel-blue/25 blur-[100px] rounded-full pointer-events-none"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
           <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-retro-card border border-retro-border shadow-xs">
               <span class="flex h-2.5 w-2.5 relative">
@@ -288,10 +267,10 @@
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              <a href="#monte-seu-poke" class="w-full sm:w-auto px-8 py-4 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white font-extrabold text-sm uppercase tracking-wider transition-all duration-300 shadow-md transform hover:-translate-y-0.5 text-center">
+              <a href="#monte-seu-poke" class="w-full sm:w-auto px-8 py-4 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white font-extrabold text-sm uppercase tracking-wider transition-all duration-300 shadow-sm">
                 Montar Meu Poke Agora 🥗
               </a>
-              <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-retro-card hover:bg-retro-subtle text-charcoal border border-retro-border hover:border-pastel-blue font-bold text-sm uppercase tracking-wider transition-all text-center shadow-xs">
+              <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-retro-card hover:bg-retro-subtle text-charcoal border border-retro-border hover:border-pastel-blue font-bold text-sm uppercase tracking-wider transition-all duration-300">
                 Ver Mais Pedidos
               </a>
             </div>
@@ -310,11 +289,9 @@
             </div>
           </div>
 
-          <!-- Destaque com o Logo do Mascote Neko Poke -->
           <div class="lg:col-span-5 relative flex justify-center">
             <div class="relative w-72 sm:w-96 lg:w-[420px] aspect-square">
               <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-pastel-orange/40 to-pastel-blue/40 opacity-70 blur-2xl"></div>
-              
               <div class="relative w-full h-full rounded-full border-4 border-retro-card overflow-hidden shadow-xl bg-retro-card group">
                 <img 
                   src="file:///C:/Users/aluno.dsi/.gemini/antigravity/brain/7bf6e4d2-ac40-4e4e-b723-305f5566d8a1/neko_poke_logo_1790792740236.jpg" 
@@ -323,7 +300,6 @@
                 />
               </div>
 
-              <!-- Badge Flutuante 1 -->
               <div class="absolute -top-4 -right-2 sm:-right-4 bg-retro-card/95 backdrop-blur-md border border-retro-border p-3.5 rounded-2xl shadow-md flex items-center gap-3 badge-pulse">
                 <div class="w-10 h-10 rounded-xl bg-pastel-orange/20 text-pastel-orange-dark flex items-center justify-center text-xl">
                   🐱
@@ -334,7 +310,6 @@
                 </div>
               </div>
 
-              <!-- Badge Flutuante 2 -->
               <div class="absolute -bottom-4 -left-2 sm:-left-6 bg-retro-card/95 backdrop-blur-md border border-retro-border p-3.5 rounded-2xl shadow-md flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-pastel-blue/20 text-pastel-blue-dark flex items-center justify-center text-xl">
                   🥗
@@ -346,17 +321,12 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ==============================================
-         MONTE O SEU POKE (BUILDER INTERATIVO)
-    ============================================== -->
     <section id="monte-seu-poke" class="py-20 bg-retro-subtle/40 border-y border-retro-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <div class="text-center max-w-3xl mx-auto mb-14">
           <span class="text-pastel-orange-dark text-xs font-black tracking-widest uppercase bg-pastel-orange/20 px-3 py-1 rounded-full border border-pastel-orange/40">
             Você é o Chef 🥗
@@ -369,10 +339,7 @@
           </p>
         </div>
 
-        <!-- Grade com as 4 Etapas Estruturadas -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
-          <!-- ETAPA 1: ESCOLHA A BASE -->
           <div class="bg-retro-card p-6 sm:p-7 rounded-3xl border border-retro-border flex flex-col justify-between shadow-xs">
             <div>
               <div class="flex items-center justify-between mb-3">
@@ -389,12 +356,7 @@
               </p>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="group-base">
-                <button 
-                  type="button" 
-                  onclick="selecionarBase('Arroz Japonês (Shari)')"
-                  data-base="Arroz Japonês (Shari)"
-                  class="poke-base-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="selecionarBase('Arroz Japonês (Shari)')" data-base="Arroz Japonês (Shari)" class="poke-base-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🍚</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Arroz Japonês (Shari)</span>
@@ -402,12 +364,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="selecionarBase('Arroz Integral com Grãos')"
-                  data-base="Arroz Integral com Grãos"
-                  class="poke-base-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="selecionarBase('Arroz Integral com Grãos')" data-base="Arroz Integral com Grãos" class="poke-base-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🌾</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Arroz Integral com Grãos</span>
@@ -415,12 +372,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="selecionarBase('Mix de Folhas Verdes')"
-                  data-base="Mix de Folhas Verdes"
-                  class="poke-base-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="selecionarBase('Mix de Folhas Verdes')" data-base="Mix de Folhas Verdes" class="poke-base-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🥗</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Mix de Folhas Verdes</span>
@@ -428,12 +380,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="selecionarBase('Metade Arroz / Metade Folhas')"
-                  data-base="Metade Arroz / Metade Folhas"
-                  class="poke-base-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="selecionarBase('Metade Arroz / Metade Folhas')" data-base="Metade Arroz / Metade Folhas" class="poke-base-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🌗</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Metade Arroz / Metade Folhas</span>
@@ -444,7 +391,6 @@
             </div>
           </div>
 
-          <!-- ETAPA 2: A PROTEÍNA (🍣) -->
           <div class="bg-retro-card p-6 sm:p-7 rounded-3xl border border-retro-border flex flex-col justify-between shadow-xs">
             <div>
               <div class="flex items-center justify-between mb-3">
@@ -452,7 +398,7 @@
                   <span class="w-8 h-8 rounded-xl bg-pastel-orange/20 text-pastel-orange-dark flex items-center justify-center font-bold text-sm">02</span>
                   <h3 class="text-lg font-bold font-display text-charcoal-800">2. A Proteína</h3>
                 </div>
-                <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-pastel-orange/15 text-pastel-orange-dark border border-pastel-orange/30" id="badge-count-proteinas">
+                <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-pastel-orange/15 text-pastel-orange-dark border border-pastel-orange/30" id="badge-count-protein">
                   Escolher até 2 (0/2)
                 </span>
               </div>
@@ -461,12 +407,7 @@
               </p>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="group-proteinas">
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('proteinas', 'Salmão Fresco Nobre', 2)"
-                  data-item="Salmão Fresco Nobre"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('proteinas', 'Salmão Fresco Nobre', 2)" data-item="Salmão Fresco Nobre" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🍣</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Salmão Fresco Nobre</span>
@@ -474,12 +415,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('proteinas', 'Atum Vermelho Fresco', 2)"
-                  data-item="Atum Vermelho Fresco"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('proteinas', 'Atum Vermelho Fresco', 2)" data-item="Atum Vermelho Fresco" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🍣</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Atum Vermelho Fresco</span>
@@ -487,12 +423,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('proteinas', 'Shimeji na Manteiga', 2)"
-                  data-item="Shimeji na Manteiga"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('proteinas', 'Shimeji na Manteiga', 2)" data-item="Shimeji na Manteiga" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🍣</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Shimeji na Manteiga</span>
@@ -500,12 +431,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('proteinas', 'Camarão Grelhado', 2)"
-                  data-item="Camarão Grelhado"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('proteinas', 'Camarão Grelhado', 2)" data-item="Camarão Grelhado" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🍣</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Camarão Grelhado</span>
@@ -516,7 +442,6 @@
             </div>
           </div>
 
-          <!-- ETAPA 3: MOLHOS ARTESANAIS (🥣) -->
           <div class="bg-retro-card p-6 sm:p-7 rounded-3xl border border-retro-border flex flex-col justify-between shadow-xs">
             <div>
               <div class="flex items-center justify-between mb-3">
@@ -533,12 +458,7 @@
               </p>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="group-molhos">
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('molhos', 'Shoyu Tradicional & Trufado', 2)"
-                  data-item="Shoyu Tradicional & Trufado"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('molhos', 'Shoyu Tradicional & Trufado', 2)" data-item="Shoyu Tradicional & Trufado" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🥣</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Shoyu Tradicional & Trufado</span>
@@ -546,12 +466,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('molhos', 'Tarê Doce da Casa', 2)"
-                  data-item="Tarê Doce da Casa"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('molhos', 'Tarê Doce da Casa', 2)" data-item="Tarê Doce da Casa" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🥣</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Tarê Doce da Casa</span>
@@ -559,12 +474,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('molhos', 'Spicy Mayo (Picante Suave)', 2)"
-                  data-item="Spicy Mayo (Picante Suave)"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('molhos', 'Spicy Mayo (Picante Suave)', 2)" data-item="Spicy Mayo (Picante Suave)" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🥣</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Spicy Mayo (Picante Suave)</span>
@@ -572,12 +482,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('molhos', 'Ponzu Cítrico Refrescante', 2)"
-                  data-item="Ponzu Cítrico Refrescante"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('molhos', 'Ponzu Cítrico Refrescante', 2)" data-item="Ponzu Cítrico Refrescante" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-orange text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🥣</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Ponzu Cítrico Refrescante</span>
@@ -588,7 +493,6 @@
             </div>
           </div>
 
-          <!-- ETAPA 4: TOPPINGS & CRUNCH (🥜) -->
           <div class="bg-retro-card p-6 sm:p-7 rounded-3xl border border-retro-border flex flex-col justify-between shadow-xs">
             <div>
               <div class="flex items-center justify-between mb-3">
@@ -605,12 +509,7 @@
               </p>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="group-toppings">
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('toppings', 'Couve Crispy Crocante', 3)"
-                  data-item="Couve Crispy Crocante"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-blue text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('toppings', 'Couve Crispy Crocante', 3)" data-item="Couve Crispy Crocante" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-blue text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🥜</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Couve Crispy Crocante</span>
@@ -618,12 +517,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('toppings', 'Castanha de Caju Tostada', 3)"
-                  data-item="Castanha de Caju Tostada"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-blue text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('toppings', 'Castanha de Caju Tostada', 3)" data-item="Castanha de Caju Tostada" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-blue text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🥜</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Castanha de Caju Tostada</span>
@@ -631,12 +525,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('toppings', 'Manga em Cubos & Abacate', 3)"
-                  data-item="Manga em Cubos & Abacate"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-blue text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('toppings', 'Manga em Cubos & Abacate', 3)" data-item="Manga em Cubos & Abacate" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-blue text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🥜</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Manga em Cubos & Abacate</span>
@@ -644,12 +533,7 @@
                   <span class="check-icon w-5 h-5 rounded-full border border-charcoal-300 flex items-center justify-center text-[10px] text-transparent transition-all">✓</span>
                 </button>
 
-                <button 
-                  type="button" 
-                  onclick="alternarIngrediente('toppings', 'Nori Tostado & Gergelim', 3)"
-                  data-item="Nori Tostado & Gergelim"
-                  class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-blue text-left transition-all group"
-                >
+                <button type="button" onclick="alternarIngrediente('toppings', 'Nori Tostado & Gergelim', 3)" data-item="Nori Tostado & Gergelim" class="poke-item-btn flex items-center justify-between p-3.5 rounded-2xl bg-retro-subtle/50 border border-retro-border hover:border-pastel-blue text-left transition-all group">
                   <div class="flex items-center gap-2.5">
                     <span class="text-xl">🥜</span>
                     <span class="text-xs font-semibold text-charcoal group-hover:text-charcoal-800">Nori Tostado & Gergelim</span>
@@ -659,13 +543,10 @@
               </div>
             </div>
           </div>
-
         </div>
 
-        <!-- RESUMO DA MONTAGEM & BOTÃO ADICIONAR AO CARRINHO -->
         <div class="mt-12 bg-retro-card p-6 sm:p-8 rounded-3xl border-2 border-pastel-orange/60 shadow-md relative overflow-hidden">
           <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
-            
             <div class="space-y-2 text-center lg:text-left flex-grow">
               <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pastel-orange/20 text-pastel-orange-dark text-xs font-bold uppercase tracking-wider">
                 <span class="w-2 h-2 rounded-full bg-pastel-orange-dark animate-pulse"></span>
@@ -674,8 +555,7 @@
               <h4 class="text-xl font-bold font-display text-charcoal-800">
                 Poke Personalizado Neko
               </h4>
-              
-              <!-- Preview das Escolhas em Texto Limpo -->
+
               <div class="text-xs text-charcoal space-y-1 bg-retro-subtle/70 p-4 rounded-2xl border border-retro-border max-w-3xl">
                 <p><strong>Base:</strong> <span class="text-charcoal-800 font-medium" id="summary-base">Arroz Japonês (Shari)</span></p>
                 <p><strong>Proteínas:</strong> <span class="text-charcoal-400 font-medium" id="summary-proteinas">Nenhuma selecionada (escolha até 2)</span></p>
@@ -684,35 +564,23 @@
               </div>
             </div>
 
-            <!-- Preço e Botão de Ação (CTA Pastel Blue) -->
             <div class="flex flex-col sm:flex-row lg:flex-col items-center justify-end gap-3 shrink-0 w-full lg:w-auto text-center">
               <div>
                 <span class="text-[10px] uppercase text-charcoal-500 block font-bold">Valor Total do Poke</span>
                 <span class="text-3xl font-black font-display text-charcoal-800">R$ 54,90</span>
               </div>
-              <button 
-                type="button" 
-                onclick="adicionarPokePersonalizadoAoCarrinho()" 
-                class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-pastel-blue hover:bg-pastel-blue-hover text-white font-extrabold text-sm uppercase tracking-wider transition-all duration-300 shadow-md transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
-              >
+              <button type="button" onclick="adicionarPokePersonalizadoAoCarrinho()" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-pastel-blue hover:bg-pastel-blue-hover text-white font-extrabold text-sm uppercase tracking-wider transition-all duration-300 shadow-md">
                 <span>🛒</span>
                 <span>Adicionar Poke ao Carrinho</span>
               </button>
             </div>
-
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ==============================================
-         MENU / CARDÁPIO COM PEDIDO DIRETO AO CARRINHO
-    ============================================== -->
     <section id="menu" class="py-24 bg-retro-bg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Header da Seção -->
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <span class="text-pastel-orange-dark text-xs font-black tracking-widest uppercase bg-pastel-orange/20 px-3 py-1 rounded-full border border-pastel-orange/40">
@@ -727,49 +595,24 @@
           </p>
         </div>
 
-        <!-- Filtros Rápidos (Abas Ativas com Pastel Orange) -->
         <div class="flex flex-wrap items-center gap-2.5 mb-10" id="filter-tabs">
-          <button class="filter-btn active px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all bg-pastel-orange text-white shadow-xs" data-filter="all">
-            Todos
-          </button>
-          <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all bg-retro-card border border-retro-border text-charcoal hover:text-charcoal-800 hover:border-pastel-orange" data-filter="pokes">
-            Pokes Prontos
-          </button>
-          <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all bg-retro-card border border-retro-border text-charcoal hover:text-charcoal-800 hover:border-pastel-orange" data-filter="sushi">
-            Sushis & Combinados
-          </button>
-          <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all bg-retro-card border border-retro-border text-charcoal hover:text-charcoal-800 hover:border-pastel-orange" data-filter="bebidas">
-            Sucos Naturais
-          </button>
+          <button class="filter-btn active px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all bg-pastel-orange text-white shadow-xs" data-filter="all">Todos</button>
+          <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all bg-retro-card border border-retro-border text-charcoal hover:text-charcoal-800" data-filter="pokes">Pokes Prontos</button>
+          <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all bg-retro-card border border-retro-border text-charcoal hover:text-charcoal-800" data-filter="sushis">Sushis & Combinados</button>
+          <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all bg-retro-card border border-retro-border text-charcoal hover:text-charcoal-800" data-filter="sucos">Sucos Naturais</button>
         </div>
 
-        <!-- Grade de Produtos -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-items">
-          
-          <!-- Item 1: Poke Neko Salmão Fresh -->
-          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-orange transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 shadow-xs hover:shadow-md" data-category="pokes">
+          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-orange transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
             <div>
               <div class="relative h-60 overflow-hidden bg-retro-subtle">
-                <img 
-                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop" 
-                  alt="Poke Neko Salmão Fresh" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <span class="absolute top-4 left-4 bg-pastel-orange text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
-                  ★ O Mais Vendido
-                </span>
-                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">
-                  450g
-                </span>
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop" alt="Poke Neko Salmão Fresh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-4 left-4 bg-pastel-orange text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">★ O Mais Vendido</span>
+                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">450g</span>
               </div>
-              
               <div class="p-6">
-                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-orange-dark transition-colors mb-2">
-                  Poke Neko Salmão Fresh
-                </h3>
-                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">
-                  Arroz shari temperado, cubos generosos de salmão fresco, cream cheese, abacate em fatias, manga docinha e couve crispy crocante.
-                </p>
+                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-orange-dark transition-colors mb-2">Poke Neko Salmão Fresh</h3>
+                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">Arroz shari temperado, cubos generosos de salmão fresco, cream cheese, abacate em fatias, manga docinha e couve crispy crocante.</p>
                 <div class="flex flex-wrap gap-1.5 mb-4">
                   <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Salmão</span>
                   <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Abacate</span>
@@ -777,46 +620,28 @@
                 </div>
               </div>
             </div>
-
             <div class="p-6 pt-0 border-t border-retro-border/60 flex items-center justify-between mt-auto">
               <div>
                 <span class="text-[10px] uppercase text-charcoal-400 block font-bold">Preço</span>
                 <span class="text-2xl font-black font-display text-charcoal-800">R$ 54,90</span>
               </div>
-              <button 
-                onclick="adicionarAoCarrinho(1)" 
-                class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5 active:scale-95"
-              >
+              <button onclick="adicionarAoCarrinho(1)" class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5">
                 <span>Pedir Agora</span>
                 <span>+</span>
               </button>
             </div>
           </div>
 
-          <!-- Item 2: Poke Tuna Spicy Wave -->
-          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-orange transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 shadow-xs hover:shadow-md" data-category="pokes">
+          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-orange transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
             <div>
               <div class="relative h-60 overflow-hidden bg-retro-subtle">
-                <img 
-                  src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop" 
-                  alt="Poke Tuna Spicy Wave" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <span class="absolute top-4 left-4 bg-pastel-orange text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
-                  🌶️ Toque Spicy
-                </span>
-                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">
-                  450g
-                </span>
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop" alt="Poke Tuna Spicy Wave" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-4 left-4 bg-pastel-orange text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">🌶️ Toque Spicy</span>
+                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">450g</span>
               </div>
-              
               <div class="p-6">
-                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-orange-dark transition-colors mb-2">
-                  Poke Tuna Spicy Wave
-                </h3>
-                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">
-                  Atum vermelho marinado em óleo de gergelim e togarashi, edamame fresco, sunomono artesanal, spicy mayo da casa e castanhas tostadas.
-                </p>
+                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-orange-dark transition-colors mb-2">Poke Tuna Spicy Wave</h3>
+                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">Atum vermelho marinado em óleo de gergelim e togarashi, edamame fresco, sunomono artesanal, spicy mayo da casa e castanhas tostadas.</p>
                 <div class="flex flex-wrap gap-1.5 mb-4">
                   <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Atum Fresco</span>
                   <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Spicy Mayo</span>
@@ -824,46 +649,28 @@
                 </div>
               </div>
             </div>
-
             <div class="p-6 pt-0 border-t border-retro-border/60 flex items-center justify-between mt-auto">
               <div>
                 <span class="text-[10px] uppercase text-charcoal-400 block font-bold">Preço</span>
                 <span class="text-2xl font-black font-display text-charcoal-800">R$ 56,90</span>
               </div>
-              <button 
-                onclick="adicionarAoCarrinho(2)" 
-                class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5 active:scale-95"
-              >
+              <button onclick="adicionarAoCarrinho(2)" class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5">
                 <span>Pedir Agora</span>
                 <span>+</span>
               </button>
             </div>
           </div>
 
-          <!-- Item 3: Poke Green Neko (Shimeji) -->
-          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-blue transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 shadow-xs hover:shadow-md" data-category="pokes">
+          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-blue transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
             <div>
               <div class="relative h-60 overflow-hidden bg-retro-subtle">
-                <img 
-                  src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800&auto=format&fit=crop" 
-                  alt="Poke Green Neko (Shimeji)" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <span class="absolute top-4 left-4 bg-pastel-blue text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
-                  🌱 100% Veggie
-                </span>
-                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">
-                  420g
-                </span>
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800&auto=format&fit=crop" alt="Poke Green Neko (Shimeji)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-4 left-4 bg-pastel-blue text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">🌱 100% Veggie</span>
+                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">420g</span>
               </div>
-              
               <div class="p-6">
-                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-blue-dark transition-colors mb-2">
-                  Poke Green Neko (Shimeji)
-                </h3>
-                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">
-                  Mix de folhas verdes com arroz integral, cogumelos shimeji salteados no azeite, tofu marinado, pepino sunomono e gergelim tostado.
-                </p>
+                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-blue-dark transition-colors mb-2">Poke Green Neko (Shimeji)</h3>
+                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">Mix de folhas verdes com arroz integral, cogumelos shimeji salteados no azeite, tofu marinado, pepino sunomono e gergelim tostado.</p>
                 <div class="flex flex-wrap gap-1.5 mb-4">
                   <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Shimeji</span>
                   <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Tofu</span>
@@ -871,46 +678,28 @@
                 </div>
               </div>
             </div>
-
             <div class="p-6 pt-0 border-t border-retro-border/60 flex items-center justify-between mt-auto">
               <div>
                 <span class="text-[10px] uppercase text-charcoal-400 block font-bold">Preço</span>
                 <span class="text-2xl font-black font-display text-charcoal-800">R$ 48,90</span>
               </div>
-              <button 
-                onclick="adicionarAoCarrinho(3)" 
-                class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5 active:scale-95"
-              >
+              <button onclick="adicionarAoCarrinho(3)" class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5">
                 <span>Pedir Agora</span>
                 <span>+</span>
               </button>
             </div>
           </div>
 
-          <!-- Item 4: Combo Neko Sushi Box -->
-          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-orange transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 shadow-xs hover:shadow-md" data-category="sushi">
+          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-orange transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
             <div>
               <div class="relative h-60 overflow-hidden bg-retro-subtle">
-                <img 
-                  src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=800&auto=format&fit=crop" 
-                  alt="Combo Neko Sushi Box" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <span class="absolute top-4 left-4 bg-pastel-orange text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
-                  🍣 24 Peças
-                </span>
-                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">
-                  Ideal p/ 2
-                </span>
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=800&auto=format&fit=crop" alt="Combo Neko Sushi Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-4 left-4 bg-pastel-orange text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">🍣 24 Peças</span>
+                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">Ideal p/ 2</span>
               </div>
-              
               <div class="p-6">
-                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-orange-dark transition-colors mb-2">
-                  Combo Neko Sushi Box
-                </h3>
-                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">
-                  8 sashimis de salmão fresco, 4 nigiris maçaricados com azeite trufado, 8 uramakis de salmão especial e 4 gunkans de maracujá.
-                </p>
+                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-orange-dark transition-colors mb-2">Combo Neko Sushi Box</h3>
+                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">8 sashimis de salmão fresco, 4 nigiris maçaricados com azeite trufado, 8 uramakis de salmão especial e 4 gunkans de maracujá.</p>
                 <div class="flex flex-wrap gap-1.5 mb-4">
                   <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Sashimi</span>
                   <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Nigiri Trufado</span>
@@ -918,46 +707,28 @@
                 </div>
               </div>
             </div>
-
             <div class="p-6 pt-0 border-t border-retro-border/60 flex items-center justify-between mt-auto">
               <div>
                 <span class="text-[10px] uppercase text-charcoal-400 block font-bold">Preço</span>
                 <span class="text-2xl font-black font-display text-charcoal-800">R$ 89,90</span>
               </div>
-              <button 
-                onclick="adicionarAoCarrinho(4)" 
-                class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5 active:scale-95"
-              >
+              <button onclick="adicionarAoCarrinho(4)" class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5">
                 <span>Pedir Agora</span>
                 <span>+</span>
               </button>
             </div>
           </div>
 
-          <!-- Item 5: Hot Roll Crocante Neko -->
-          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-orange transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 shadow-xs hover:shadow-md" data-category="sushi">
+          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-orange transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
             <div>
               <div class="relative h-60 overflow-hidden bg-retro-subtle">
-                <img 
-                  src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?q=80&w=800&auto=format&fit=crop" 
-                  alt="Hot Roll Crocante Neko" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <span class="absolute top-4 left-4 bg-pastel-orange text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
-                  🔥 Super Crocante
-                </span>
-                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">
-                  10 Peças
-                </span>
+                <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?q=80&w=800&auto=format&fit=crop" alt="Hot Roll Crocante Neko" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-4 left-4 bg-pastel-orange text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">🔥 Super Crocante</span>
+                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">10 Peças</span>
               </div>
-              
               <div class="p-6">
-                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-orange-dark transition-colors mb-2">
-                  Hot Roll Crocante Neko
-                </h3>
-                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">
-                  Rolinhos empanados na farinha panko ultra-sequinha, recheados com salmão e cream cheese, finalizados com tarê artesanal e cebolinha.
-                </p>
+                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-orange-dark transition-colors mb-2">Hot Roll Crocante Neko</h3>
+                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">Rolinhos empanados na farinha panko ultra-sequinha, recheados com salmão e cream cheese, finalizados com tarê artesanal e cebolinha.</p>
                 <div class="flex flex-wrap gap-1.5 mb-4">
                   <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Panko Crocante</span>
                   <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Cream Cheese</span>
@@ -965,1612 +736,119 @@
                 </div>
               </div>
             </div>
-
             <div class="p-6 pt-0 border-t border-retro-border/60 flex items-center justify-between mt-auto">
               <div>
                 <span class="text-[10px] uppercase text-charcoal-400 block font-bold">10 unidades</span>
                 <span class="text-2xl font-black font-display text-charcoal-800">R$ 38,90</span>
               </div>
-              <button 
-                onclick="adicionarAoCarrinho(5)" 
-                class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5 active:scale-95"
-              >
+              <button onclick="adicionarAoCarrinho(5)" class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5">
                 <span>Pedir Agora</span>
                 <span>+</span>
               </button>
             </div>
           </div>
 
-          <!-- Item 6: Suco Neko Tropical Wave -->
-          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-blue transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 shadow-xs hover:shadow-md" data-category="bebidas">
+          <div class="menu-card bg-retro-card rounded-3xl overflow-hidden border border-retro-border hover:border-pastel-blue transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
             <div>
               <div class="relative h-60 overflow-hidden bg-retro-subtle">
-                <img 
-                  src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=800&auto=format&fit=crop" 
-                  alt="Suco Neko Tropical Wave" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <span class="absolute top-4 left-4 bg-pastel-blue text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
-                  🍹 Sem Açúcar
-                </span>
-                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">
-                  500ml
-                </span>
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=800&auto=format&fit=crop" alt="Suco Neko Tropical Wave" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-4 left-4 bg-pastel-blue text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">🍹 Sem Açúcar</span>
+                <span class="absolute top-4 right-4 bg-retro-card/90 backdrop-blur-md text-charcoal text-[11px] font-bold px-3 py-1 rounded-full border border-retro-border">500ml</span>
               </div>
-              
               <div class="p-6">
-                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-blue-dark transition-colors mb-2">
-                  Suco Neko Tropical Wave
-                </h3>
-                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">
-                  Feito na hora com fruta de verdade: Maracujá com manga, gengibre e hortelã fresca. O par perfeito para refrescar o seu dia.
-                </p>
+                <h3 class="text-xl font-bold font-display text-charcoal-800 group-hover:text-pastel-blue-dark transition-colors mb-2">Suco Neko Tropical Wave</h3>
+                <p class="text-charcoal-500 text-xs leading-relaxed mb-4">Suco natural de abacaxi, manga e maracujá com leve toque de limão e sem adição de açúcar.</p>
                 <div class="flex flex-wrap gap-1.5 mb-4">
-                  <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">100% Natural</span>
-                  <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Gengibre</span>
-                  <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Super Gelado</span>
+                  <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Abacaxi</span>
+                  <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Manga</span>
+                  <span class="text-[10px] bg-retro-subtle text-charcoal px-2.5 py-0.5 rounded-full font-medium border border-retro-border/60">Maracujá</span>
                 </div>
               </div>
             </div>
-
             <div class="p-6 pt-0 border-t border-retro-border/60 flex items-center justify-between mt-auto">
               <div>
-                <span class="text-[10px] uppercase text-charcoal-400 block font-bold">Garrafa 500ml</span>
-                <span class="text-2xl font-black font-display text-charcoal-800">R$ 14,90</span>
+                <span class="text-[10px] uppercase text-charcoal-400 block font-bold">Preço</span>
+                <span class="text-2xl font-black font-display text-charcoal-800">R$ 12,90</span>
               </div>
-              <button 
-                onclick="adicionarAoCarrinho(6)" 
-                class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5 active:scale-95"
-              >
+              <button onclick="adicionarAoCarrinho(6)" class="px-5 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-extrabold uppercase tracking-wide transition-all shadow-xs flex items-center gap-1.5">
                 <span>Pedir Agora</span>
                 <span>+</span>
               </button>
             </div>
           </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==============================================
-         O CONCEITO / SOBRE NEKO POKE
-    ============================================== -->
-    <section id="sobre" class="py-20 bg-retro-subtle/50 border-t border-retro-border">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div class="lg:col-span-5 text-center flex justify-center">
-            <div class="relative w-64 sm:w-80 aspect-square rounded-3xl overflow-hidden border-2 border-pastel-orange/50 shadow-md bg-retro-card p-3">
-              <img 
-                src="file:///C:/Users/aluno.dsi/.gemini/antigravity/brain/7bf6e4d2-ac40-4e4e-b723-305f5566d8a1/neko_poke_logo_1790792740236.jpg" 
-                alt="Emblema Mascote Neko Poke" 
-                class="w-full h-full object-cover rounded-2xl"
-              />
-            </div>
-          </div>
-
-          <div class="lg:col-span-7 space-y-5">
-            <span class="text-pastel-orange-dark text-xs font-black tracking-widest uppercase bg-pastel-orange/20 px-3 py-1 rounded-full border border-pastel-orange/40">
-              O Conceito Neko Poke
-            </span>
-            <h2 class="text-3xl sm:text-5xl font-display font-black text-charcoal-800 leading-tight">
-              A alma de um Izakaya com o frescor moderno dos bowls.
-            </h2>
-            <p class="text-charcoal-600 text-sm sm:text-base leading-relaxed">
-              No folclore japonês, o gato (<em>Neko</em>) é símbolo de boa sorte, hospitalidade e alegria. Inspirados na estética nostálgica das antigas tabernas e nos melhores bowls havaianos, criamos um espaço onde o frescor do peixe nobre e o tempero caseiro se encontram em perfeita sintonia.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div class="p-4 rounded-2xl bg-retro-card border border-retro-border shadow-xs">
-                <span class="text-2xl mb-2 block">🔪</span>
-                <h4 class="font-bold text-charcoal-800 text-sm">Cortes do Dia</h4>
-                <p class="text-xs text-charcoal-500 mt-1">Salmão e atum frescos manipulados rigorosamente todas as manhãs.</p>
-              </div>
-              <div class="p-4 rounded-2xl bg-retro-card border border-retro-border shadow-xs">
-                <span class="text-2xl mb-2 block">🥣</span>
-                <h4 class="font-bold text-charcoal-800 text-sm">Molhos de Autor</h4>
-                <p class="text-xs text-charcoal-500 mt-1">Receitas artesanais exclusivas com shoyu trufado e tarê da casa.</p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ==============================================
-         SEÇÃO DE DELIVERY / PEDIDO ONLINE
-    ============================================== -->
-    <section id="delivery" class="py-20 bg-retro-bg border-t border-retro-border">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-retro-card border-2 border-pastel-orange/50 rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-md">
-          
-          <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-pastel-orange/15 rounded-full blur-3xl pointer-events-none"></div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-            <div class="lg:col-span-8 space-y-4">
-              <span class="text-pastel-orange-dark text-xs font-black tracking-widest uppercase bg-pastel-orange/20 px-3 py-1 rounded-full border border-pastel-orange/40">
-                Delivery Rápido BH
-              </span>
-              <h2 class="text-3xl sm:text-5xl font-display font-black text-charcoal-800 leading-tight">
-                Bateu a fome? Peça onde estiver e receba em minutos!
-              </h2>
-              <p class="text-charcoal-600 text-sm sm:text-base max-w-2xl leading-relaxed">
-                Nossas embalagens exclusivas mantêm a temperatura e a crocância dos ingredientes como se você estivesse comendo no balcão da loja.
-              </p>
-              
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
-                <div class="flex items-center gap-3">
-                  <div class="w-8 h-8 rounded-full bg-pastel-blue/20 text-pastel-blue-dark flex items-center justify-center font-bold text-sm">✓</div>
-                  <span class="text-xs text-charcoal-600 font-semibold">Sem taxa no 1º pedido</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <div class="w-8 h-8 rounded-full bg-pastel-blue/20 text-pastel-blue-dark flex items-center justify-center font-bold text-sm">✓</div>
-                  <span class="text-xs text-charcoal-600 font-semibold">Embalagem 100% térmica</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <div class="w-8 h-8 rounded-full bg-pastel-blue/20 text-pastel-blue-dark flex items-center justify-center font-bold text-sm">✓</div>
-                  <span class="text-xs text-charcoal-600 font-semibold">Rastreamento em tempo real</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- CTAs da Seção de Delivery (Pastel Blue) -->
-            <div class="lg:col-span-4 flex flex-col gap-3.5">
-              <button onclick="abrirCarrinho()" class="w-full py-4 px-6 rounded-2xl bg-pastel-blue hover:bg-pastel-blue-hover text-white font-extrabold text-sm flex items-center justify-center gap-3 shadow-md hover:scale-105 transition-transform">
-                <span class="text-xl">🛒</span>
-                <span>Abrir Meu Carrinho</span>
-              </button>
-              <a href="https://wa.me/5531999999999?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Neko%20Poke" target="_blank" class="w-full py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-extrabold text-sm flex items-center justify-center gap-3 shadow-md hover:scale-105 transition-transform">
-                <span class="text-xl">💬</span>
-                <span>Falar no WhatsApp Oficial</span>
-              </a>
-              <p class="text-center text-[11px] text-charcoal-400 mt-1">
-                Atendimento ativo hoje até às <strong>23:30</strong>
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==============================================
-         AVALIAÇÕES / PROVA SOCIAL
-    ============================================== -->
-    <section class="py-20 bg-retro-subtle/40 border-t border-retro-border">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-[#DE9B43] text-xs font-black tracking-widest uppercase bg-[#DE9B43]/15 px-3 py-1 rounded-full border border-[#DE9B43]/30">
-            Quem experimenta, apaixona
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-charcoal-800 mt-3">
-            O Que Dizem os Clientes
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          <div class="bg-retro-card p-6 rounded-3xl border border-retro-border flex flex-col justify-between shadow-xs">
-            <div>
-              <div class="text-[#DE9B43] text-sm mb-3">★★★★★</div>
-              <p class="text-charcoal-600 text-xs sm:text-sm leading-relaxed italic mb-4">
-                "O melhor poke de Belo Horizonte sem discussão! O salmão vem incrivelmente fresco, a couve crispy é muito sequinha e o checkout é super prático."
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-retro-border/60">
-              <div class="w-9 h-9 rounded-full bg-pastel-orange text-white flex items-center justify-center font-bold text-xs shadow-xs">
-                CB
-              </div>
-              <div>
-                <p class="text-xs font-bold text-charcoal-800">Camila Bueno</p>
-                <p class="text-[10px] text-charcoal-400">Cliente iFood • Savassi</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-retro-card p-6 rounded-3xl border border-retro-border flex flex-col justify-between shadow-xs">
-            <div>
-              <div class="text-[#DE9B43] text-sm mb-3">★★★★★</div>
-              <p class="text-charcoal-600 text-xs sm:text-sm leading-relaxed italic mb-4">
-                "Pedi o combo de sushi e um poke personalizado. Chegou antes do tempo previsto, tudo arrumadinho e com sabor espetacular. Virou o meu almoço fixo!"
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-retro-border/60">
-              <div class="w-9 h-9 rounded-full bg-pastel-blue text-white flex items-center justify-center font-bold text-xs shadow-xs">
-                RA
-              </div>
-              <div>
-                <p class="text-xs font-bold text-charcoal-800">Rodrigo Almeida</p>
-                <p class="text-[10px] text-charcoal-400">Cliente Frequente • Lourdes</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-retro-card p-6 rounded-3xl border border-retro-border flex flex-col justify-between shadow-xs">
-            <div>
-              <div class="text-[#DE9B43] text-sm mb-3">★★★★★</div>
-              <p class="text-charcoal-600 text-xs sm:text-sm leading-relaxed italic mb-4">
-                "Opção vegana com shimeji sensacional! O tarê da casa tem um sabor que você não encontra em outro lugar. Nota 10 pro tempero e apresentação."
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-retro-border/60">
-              <div class="w-9 h-9 rounded-full bg-pastel-orange-dark text-white flex items-center justify-center font-bold text-xs shadow-xs">
-                LM
-              </div>
-              <div>
-                <p class="text-xs font-bold text-charcoal-800">Luísa Menezes</p>
-                <p class="text-[10px] text-charcoal-400">Google Review • Buritis</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==============================================
-         UNIDADES / ONDE ESTAMOS (BH)
-    ============================================== -->
-    <section id="unidades" class="py-20 bg-retro-bg border-t border-retro-border">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-pastel-orange-dark text-xs font-black tracking-widest uppercase bg-pastel-orange/20 px-3 py-1 rounded-full border border-pastel-orange/40">
-            Nossas Lojas
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-charcoal-800 mt-3">
-            Onde Encontrar em BH
-          </h2>
-          <p class="text-charcoal-500 text-xs sm:text-sm mt-2">
-            Venha comer no salão com a nossa vibe ou retire no balcão sem fila.
+    <section id="sobre" class="py-20 bg-retro-subtle/30 border-t border-retro-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="text-pastel-orange-dark text-xs font-black tracking-widest uppercase bg-pastel-orange/20 px-3 py-1 rounded-full border border-pastel-orange/40">O Conceito</span>
+          <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-charcoal-800 mt-4 mb-5">Um sabor de rua com alma de Izakaya.</h2>
+          <p class="text-charcoal-500 text-sm sm:text-base leading-relaxed">
+            O NEKO POKE nasceu para unir o frescor dos bowls gourmet com a atmosfera acolhedora de um izakaya moderno. Nossas receitas valorizam ingredientes nobres, combinações inteligentes e o clima descontraído de uma experiência única em cada refeição.
           </p>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          <div class="bg-retro-card p-6 rounded-3xl border border-retro-border hover:border-pastel-blue transition-colors shadow-xs">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-black text-pastel-orange-dark uppercase tracking-wider font-retro">Loja 01</span>
-              <span class="text-[10px] bg-pastel-blue/20 text-pastel-blue-dark px-2 py-0.5 rounded-full font-bold">Salão & Takeaway</span>
+        <div class="bg-retro-card rounded-3xl border border-retro-border p-6 shadow-sm">
+          <div class="grid grid-cols-2 gap-4 text-center">
+            <div class="bg-retro-subtle rounded-2xl p-5 border border-retro-border">
+              <div class="text-3xl font-black font-display text-charcoal-800">+10k</div>
+              <div class="text-xs uppercase tracking-wider text-charcoal-500 mt-1">Avaliações</div>
             </div>
-            <h3 class="text-lg font-bold font-display text-charcoal-800 mb-2">Savassi</h3>
-            <p class="text-charcoal-500 text-xs leading-relaxed mb-4">
-              Rua Antônio de Albuquerque, 680 - Savassi, Belo Horizonte - MG
-            </p>
-            <div class="text-[11px] text-charcoal-600 space-y-1 mb-4">
-              <p>🕒 Seg a Dom: 11h30 às 23h30</p>
-              <p>📞 (31) 3281-0001</p>
+            <div class="bg-retro-subtle rounded-2xl p-5 border border-retro-border">
+              <div class="text-3xl font-black font-display text-charcoal-800">35m</div>
+              <div class="text-xs uppercase tracking-wider text-charcoal-500 mt-1">Entrega</div>
             </div>
-            <a href="https://maps.google.com" target="_blank" class="inline-block text-xs font-bold text-pastel-blue hover:text-pastel-blue-dark hover:underline">
-              Como chegar no mapa →
-            </a>
+            <div class="bg-retro-subtle rounded-2xl p-5 border border-retro-border">
+              <div class="text-3xl font-black font-display text-charcoal-800">30+</div>
+              <div class="text-xs uppercase tracking-wider text-charcoal-500 mt-1">Itens</div>
+            </div>
+            <div class="bg-retro-subtle rounded-2xl p-5 border border-retro-border">
+              <div class="text-3xl font-black font-display text-charcoal-800">4.9</div>
+              <div class="text-xs uppercase tracking-wider text-charcoal-500 mt-1">Nota</div>
+            </div>
           </div>
-
-          <div class="bg-retro-card p-6 rounded-3xl border border-retro-border hover:border-pastel-blue transition-colors shadow-xs">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-black text-pastel-orange-dark uppercase tracking-wider font-retro">Loja 02</span>
-              <span class="text-[10px] bg-pastel-blue/20 text-pastel-blue-dark px-2 py-0.5 rounded-full font-bold">Salão & Delivery</span>
-            </div>
-            <h3 class="text-lg font-bold font-display text-charcoal-800 mb-2">Lourdes</h3>
-            <p class="text-charcoal-500 text-xs leading-relaxed mb-4">
-              Rua Curitiba, 1920 - Lourdes, Belo Horizonte - MG
-            </p>
-            <div class="text-[11px] text-charcoal-600 space-y-1 mb-4">
-              <p>🕒 Seg a Dom: 11h30 às 23h30</p>
-              <p>📞 (31) 3292-0002</p>
-            </div>
-            <a href="https://maps.google.com" target="_blank" class="inline-block text-xs font-bold text-pastel-blue hover:text-pastel-blue-dark hover:underline">
-              Como chegar no mapa →
-            </a>
-          </div>
-
-          <div class="bg-retro-card p-6 rounded-3xl border border-retro-border hover:border-pastel-blue transition-colors shadow-xs">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-black text-pastel-orange-dark uppercase tracking-wider font-retro">Loja 03</span>
-              <span class="text-[10px] bg-pastel-orange/20 text-pastel-orange-dark px-2 py-0.5 rounded-full font-bold">Dark Kitchen Express</span>
-            </div>
-            <h3 class="text-lg font-bold font-display text-charcoal-800 mb-2">Buritis / Belvedere</h3>
-            <p class="text-charcoal-500 text-xs leading-relaxed mb-4">
-              Av. Professor Mário Werneck, 1420 - Buritis, BH - MG
-            </p>
-            <div class="text-[11px] text-charcoal-600 space-y-1 mb-4">
-              <p>🕒 Terça a Domingo: 17h00 às 23h45</p>
-              <p>📞 (31) 3378-0003</p>
-            </div>
-            <a href="https://maps.google.com" target="_blank" class="inline-block text-xs font-bold text-pastel-blue hover:text-pastel-blue-dark hover:underline">
-              Como chegar no mapa →
-            </a>
-          </div>
-
         </div>
+      </div>
+    </section>
 
+    <section id="unidades" class="py-20 bg-retro-bg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="text-pastel-blue-dark text-xs font-black tracking-widest uppercase bg-pastel-blue/20 px-3 py-1 rounded-full border border-pastel-blue/40">Unidades</span>
+          <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-charcoal-800 mt-4">Onde encontrar o Neko</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-retro-card rounded-3xl border border-retro-border p-6 shadow-sm">
+            <div class="text-xl font-display font-black text-charcoal-800">BH Centro</div>
+            <p class="text-charcoal-500 text-sm mt-3">Av. Afonso Pena, 1230<br />Aberto até 23h</p>
+          </div>
+          <div class="bg-retro-card rounded-3xl border border-retro-border p-6 shadow-sm">
+            <div class="text-xl font-display font-black text-charcoal-800">Savassi</div>
+            <p class="text-charcoal-500 text-sm mt-3">Rua Espírito Santo, 456<br />Delivery 7 dias</p>
+          </div>
+          <div class="bg-retro-card rounded-3xl border border-retro-border p-6 shadow-sm">
+            <div class="text-xl font-display font-black text-charcoal-800">Pampulha</div>
+            <p class="text-charcoal-500 text-sm mt-3">Av. Otacílio Negrão de Lima, 890<br />Entrega rápida</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- ==============================================
-       FOOTER RETRÔ PASTEL
-  ============================================== -->
-  <footer class="bg-retro-subtle/80 border-t border-retro-border text-charcoal-500 pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        
-        <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="relative w-10 h-10 rounded-2xl overflow-hidden border border-retro-border shadow-xs bg-retro-card shrink-0">
-              <img 
-                src="file:///C:/Users/aluno.dsi/.gemini/antigravity/brain/7bf6e4d2-ac40-4e4e-b723-305f5566d8a1/neko_poke_logo_1790792740236.jpg" 
-                alt="Logo Neko Poke" 
-                class="w-full h-full object-cover"
-                onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-pastel-orange flex items-center justify-center text-white font-retro text-lg\'>NP</div>';"
-              />
-            </div>
-            <span class="text-xl font-retro tracking-[0.18em] text-charcoal-800">
-              NEKO <span class="text-pastel-orange-dark">POKE</span>
-            </span>
-          </div>
-          <p class="text-xs text-charcoal-500 leading-relaxed">
-            Frescor, sabor e o aconchego dos tradicionais Izakayas em Belo Horizonte. Bowls montados na hora com os melhores peixes selecionados.
-          </p>
-          <div class="flex items-center gap-3 pt-2">
-            <a href="https://instagram.com" class="w-8 h-8 rounded-full bg-retro-card hover:bg-pastel-blue hover:text-white text-charcoal border border-retro-border flex items-center justify-center transition-colors text-xs font-bold" title="Instagram">
-              IG
-            </a>
-            <a href="https://tiktok.com" class="w-8 h-8 rounded-full bg-retro-card hover:bg-pastel-blue hover:text-white text-charcoal border border-retro-border flex items-center justify-center transition-colors text-xs font-bold" title="TikTok">
-              TK
-            </a>
-            <a href="https://wa.me/5531999999999" class="w-8 h-8 rounded-full bg-retro-card hover:bg-pastel-blue hover:text-white text-charcoal border border-retro-border flex items-center justify-center transition-colors text-xs font-bold" title="WhatsApp">
-              WA
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="text-sm font-extrabold text-charcoal-800 font-display uppercase tracking-wider mb-4 border-l-2 border-pastel-orange pl-2.5">
-            Cardápio
-          </h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="#monte-seu-poke" class="hover:text-pastel-blue transition-colors">Monte seu Poke</a></li>
-            <li><a href="#menu" class="hover:text-pastel-blue transition-colors">Pokes Tradicionais</a></li>
-            <li><a href="#menu" class="hover:text-pastel-blue transition-colors">Sushis & Combinados</a></li>
-            <li><a href="#menu" class="hover:text-pastel-blue transition-colors">Opções Vegetarianas</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-sm font-extrabold text-charcoal-800 font-display uppercase tracking-wider mb-4 border-l-2 border-pastel-orange pl-2.5">
-            Minha Conta
-          </h4>
-          <ul class="space-y-2 text-xs">
-            <li><button onclick="abrirModalUsuario()" class="hover:text-pastel-blue transition-colors text-left">Cadastrar Endereço</button></li>
-            <li><button onclick="abrirCarrinho()" class="hover:text-pastel-blue transition-colors text-left">Ver Meu Carrinho</button></li>
-            <li><a href="#delivery" class="hover:text-pastel-blue transition-colors">Suporte via WhatsApp</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-sm font-extrabold text-charcoal-800 font-display uppercase tracking-wider mb-4 border-l-2 border-pastel-orange pl-2.5">
-            Horário de Atendimento
-          </h4>
-          <p class="text-xs text-charcoal-600 leading-relaxed mb-2">
-            <strong>Segunda a Domingo:</strong><br />
-            11:30 às 23:30 (Salão e Delivery)
-          </p>
-          <span class="inline-flex items-center gap-1.5 text-xs text-pastel-blue-dark font-semibold">
-            <span class="w-2 h-2 rounded-full bg-pastel-blue animate-pulse"></span>
-            Aberto agora para pedidos
-          </span>
-        </div>
-
+  <footer class="bg-charcoal-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div>
+        <div class="text-2xl font-retro tracking-[0.2em] uppercase">NEKO <span class="text-pastel-orange">POKE</span></div>
+        <p class="text-charcoal-300 text-sm mt-2">Japanese bowls & izakaya em BH.</p>
       </div>
-
-      <div class="pt-8 border-t border-retro-border flex flex-col sm:flex-row items-center justify-between text-xs text-charcoal-400 gap-4">
-        <p>&copy; 2026 NEKO POKE & IZAKAYA. Todos os direitos reservados.</p>
-        <p class="flex items-center gap-2">
-          <span>Aceitamos: Pix, Cartões de Crédito e Vouchers Refeição (Sodexo, Alelo, VR, Ticket)</span>
-        </p>
+      <div class="text-sm text-charcoal-300 text-center md:text-right">
+        <p>📍 Belo Horizonte • 🕒 Seg-Sun • 12h às 23h</p>
+        <p class="mt-1">📞 (31) 99999-0000</p>
       </div>
     </div>
   </footer>
 
-  <!-- ==============================================
-       BOTÃO FLUTUANTE DE CARRINHO (PASTEL BLUE #88A9C3)
-  ============================================== -->
-  <button 
-    id="floating-cart-btn" 
-    onclick="abrirCarrinho()" 
-    class="fixed bottom-6 right-6 z-40 flex items-center gap-3 bg-pastel-blue hover:bg-pastel-blue-hover text-white py-3.5 px-5 rounded-full shadow-lg transform hover:scale-105 active:scale-95 transition-all"
-    aria-label="Abrir Carrinho de Compras"
-  >
-    <div class="relative">
-      <span class="text-xl">🛒</span>
-      <span id="floating-cart-badge" class="absolute -top-2 -right-2 bg-retro-card text-charcoal-800 text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center border border-pastel-blue">
-        0
-      </span>
-    </div>
-    <span class="font-extrabold text-xs uppercase tracking-wide hidden sm:inline font-retro">Ver Pedido</span>
-    <span id="floating-cart-total" class="font-bold text-xs bg-charcoal-900/15 px-2 py-0.5 rounded-full">R$ 0,00</span>
-  </button>
-
-  <!-- ==============================================
-       DRAWER / SIDEBAR DO CARRINHO DE COMPRAS
-  ============================================== -->
-  <div 
-    id="cart-backdrop" 
-    onclick="fecharCarrinho()" 
-    class="fixed inset-0 bg-charcoal-800/40 backdrop-blur-xs z-50 opacity-0 pointer-events-none transition-opacity duration-300"
-  ></div>
-
-  <aside 
-    id="cart-drawer" 
-    class="fixed top-0 right-0 h-full w-full max-w-md bg-retro-card border-l border-retro-border shadow-2xl z-50 flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out"
-  >
-    <div class="p-6 border-b border-retro-border flex items-center justify-between bg-retro-subtle/60">
-      <div class="flex items-center gap-2.5">
-        <div class="w-9 h-9 rounded-xl bg-pastel-blue/20 text-pastel-blue-dark flex items-center justify-center text-lg">
-          🛒
-        </div>
-        <div>
-          <h3 class="text-lg font-bold font-display text-charcoal-800">Meu Carrinho</h3>
-          <p class="text-xs text-charcoal-500" id="cart-item-count-text">0 itens adicionados</p>
-        </div>
-      </div>
-      <button 
-        onclick="fecharCarrinho()" 
-        class="w-8 h-8 rounded-full bg-retro-subtle hover:bg-retro-border text-charcoal hover:text-charcoal-800 flex items-center justify-center transition-colors"
-        aria-label="Fechar Carrinho"
-      >
-        ✕
-      </button>
-    </div>
-
-    <!-- Lista de Itens do Carrinho -->
-    <div id="cart-items-container" class="flex-grow overflow-y-auto p-6 space-y-4">
-      <!-- Inserido dinamicamente via JS -->
-    </div>
-
-    <!-- Rodapé do Carrinho -->
-    <div class="p-6 border-t border-retro-border bg-retro-subtle/40 space-y-4">
-      
-      <div id="cart-user-preview" class="p-3.5 rounded-2xl bg-retro-card border border-retro-border flex items-center justify-between text-xs shadow-xs">
-        <div class="flex items-center gap-2.5 overflow-hidden">
-          <span class="text-base shrink-0">📍</span>
-          <div class="truncate">
-            <p class="font-bold text-charcoal-800 truncate" id="cart-user-name">Sem dados de entrega</p>
-            <p class="text-[11px] text-charcoal-500 truncate" id="cart-user-address">Clique para cadastrar seu endereço</p>
-          </div>
-        </div>
-        <button onclick="abrirModalUsuario()" class="text-pastel-blue hover:text-pastel-blue-dark font-bold text-xs uppercase shrink-0 ml-2">
-          Alterar
-        </button>
-      </div>
-
-      <div class="space-y-1.5 text-xs">
-        <div class="flex justify-between text-charcoal-500">
-          <span>Subtotal dos itens</span>
-          <span id="cart-subtotal" class="text-charcoal-800 font-semibold">R$ 0,00</span>
-        </div>
-        <div class="flex justify-between text-charcoal-500">
-          <span>Taxa de Entrega</span>
-          <span class="text-pastel-blue-dark font-semibold">Grátis (Promo Neko)</span>
-        </div>
-        <div class="flex justify-between text-base font-extrabold text-charcoal-800 pt-2 border-t border-retro-border">
-          <span>Total a Pagar</span>
-          <span id="cart-total-price" class="text-charcoal-800 font-display text-xl">R$ 0,00</span>
-        </div>
-      </div>
-
-      <button 
-        onclick="iniciarCheckout()" 
-        class="w-full py-4 px-6 rounded-2xl bg-pastel-blue hover:bg-pastel-blue-hover text-white font-extrabold text-sm flex items-center justify-center gap-2.5 shadow-md transition-all transform hover:scale-[1.02] active:scale-95"
-      >
-        <span class="text-xl">💳</span>
-        <span>Finalizar Compra</span>
-      </button>
-
-      <p class="text-[11px] text-center text-charcoal-400">
-        Ambiente seguro • Pagamento simulado em Modo de Teste
-      </p>
-    </div>
-  </aside>
-
-  <!-- ==============================================
-       MODAL DE REGISTO / LOGIN
-  ============================================== -->
-  <div 
-    id="user-modal" 
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-800/45 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300"
-  >
-    <div class="bg-retro-card border border-retro-border w-full max-w-md rounded-3xl p-6 sm:p-8 shadow-2xl relative transform scale-95 transition-transform duration-300">
-      
-      <button 
-        onclick="fecharModalUsuario()" 
-        class="absolute top-5 right-5 w-8 h-8 rounded-full bg-retro-subtle text-charcoal-500 hover:text-charcoal-800 flex items-center justify-center transition-colors"
-      >
-        ✕
-      </button>
-
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-12 h-12 rounded-2xl bg-pastel-orange flex items-center justify-center text-xl text-white shadow-xs">
-          👤
-        </div>
-        <div>
-          <h3 class="text-xl font-bold font-display text-charcoal-800">Dados de Entrega</h3>
-          <p class="text-xs text-charcoal-500">Preencha uma vez para seus pedidos rápidos</p>
-        </div>
-      </div>
-
-      <form id="form-cadastro" onsubmit="salvarDadosUsuario(event)" class="space-y-4">
-        <div>
-          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-bold mb-1.5" for="input-nome">
-            Nome Completo *
-          </label>
-          <input 
-            type="text" 
-            id="input-nome" 
-            required 
-            placeholder="Ex: Ana Maria Silva" 
-            class="w-full bg-retro-subtle/50 border border-retro-border focus:border-pastel-blue focus:bg-white rounded-xl px-4 py-3 text-sm text-charcoal-800 focus:outline-none transition-colors"
-          />
-        </div>
-
-        <div>
-          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-bold mb-1.5" for="input-telefone">
-            WhatsApp / Telefone *
-          </label>
-          <input 
-            type="tel" 
-            id="input-telefone" 
-            required 
-            placeholder="Ex: (31) 99999-8888" 
-            class="w-full bg-retro-subtle/50 border border-retro-border focus:border-pastel-blue focus:bg-white rounded-xl px-4 py-3 text-sm text-charcoal-800 focus:outline-none transition-colors"
-          />
-        </div>
-
-        <div>
-          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-bold mb-1.5" for="input-morada">
-            Morada de Entrega Completa *
-          </label>
-          <textarea 
-            id="input-morada" 
-            required 
-            rows="3" 
-            placeholder="Ex: Rua Sergipe, 1200, Apto 402 - Savassi, Belo Horizonte" 
-            class="w-full bg-retro-subtle/50 border border-retro-border focus:border-pastel-blue focus:bg-white rounded-xl px-4 py-3 text-sm text-charcoal-800 focus:outline-none transition-colors resize-none"
-          ></textarea>
-        </div>
-
-        <div>
-          <label class="block text-xs uppercase tracking-wider text-charcoal-400 font-medium mb-1.5" for="input-referencia">
-            Ponto de Referência (Opcional)
-          </label>
-          <input 
-            type="text" 
-            id="input-referencia" 
-            placeholder="Ex: Próximo à Praça da Savassi, portaria 2" 
-            class="w-full bg-retro-subtle/50 border border-retro-border focus:border-pastel-blue focus:bg-white rounded-xl px-4 py-2.5 text-sm text-charcoal-800 focus:outline-none transition-colors"
-          />
-        </div>
-
-        <div class="pt-2">
-          <button 
-            type="submit" 
-            class="w-full py-3.5 bg-pastel-blue hover:bg-pastel-blue-hover text-white rounded-xl font-bold text-sm uppercase tracking-wider shadow-sm transition-transform hover:scale-[1.02] active:scale-95"
-          >
-            Salvar Dados de Entrega
-          </button>
-        </div>
-
-        <p class="text-[11px] text-center text-charcoal-400">
-          🔒 Seus dados ficam salvos localmente no seu navegador via <span class="font-mono text-charcoal-500">localStorage</span>.
-        </p>
-      </form>
-    </div>
-  </div>
-
-  <!-- ==============================================
-       MODAL DE PAGAMENTO (FLUXO DE TESTE)
-  ============================================== -->
-  <div 
-    id="payment-modal" 
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-800/45 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300"
-  >
-    <div class="bg-retro-card border border-retro-border w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-2xl relative transform scale-95 transition-transform duration-300">
-      
-      <button 
-        onclick="fecharModalPagamento()" 
-        class="absolute top-5 right-5 w-8 h-8 rounded-full bg-retro-subtle text-charcoal-500 hover:text-charcoal-800 flex items-center justify-center transition-colors"
-        aria-label="Fechar Pagamento"
-      >
-        ✕
-      </button>
-
-      <div class="flex items-center justify-between mb-6 pr-8">
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-2xl bg-pastel-orange flex items-center justify-center text-xl text-white shadow-xs">
-            💳
-          </div>
-          <div>
-            <h3 class="text-xl font-bold font-display text-charcoal-800">Pagamento do Pedido</h3>
-            <p class="text-xs text-charcoal-500">Ambiente de Simulação • Modo de Teste</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="p-4 rounded-2xl bg-retro-subtle/50 border border-retro-border flex items-center justify-between mb-6">
-        <div>
-          <span class="text-[10px] uppercase font-bold text-charcoal-400 block font-retro">Total a pagar</span>
-          <span class="text-xs text-charcoal-600">Entrega Grátis inclusa</span>
-        </div>
-        <span id="payment-modal-total" class="text-2xl font-black font-display text-charcoal-800">R$ 0,00</span>
-      </div>
-
-      <!-- Abas de Pagamento (Ativa: Pastel Orange #E8A382) -->
-      <div class="grid grid-cols-2 gap-3 mb-6">
-        <button 
-          type="button" 
-          id="tab-btn-card" 
-          onclick="selecionarMetodoPagamento('cartao')" 
-          class="flex items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider border transition-all bg-pastel-orange text-white border-pastel-orange shadow-xs font-retro"
-        >
-          <span>💳</span>
-          <span>Cartão de Crédito</span>
-        </button>
-
-        <button 
-          type="button" 
-          id="tab-btn-pix" 
-          onclick="selecionarMetodoPagamento('pix')" 
-          class="flex items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider border transition-all bg-retro-subtle/50 text-charcoal border-retro-border hover:border-pastel-blue hover:text-charcoal-800 font-retro"
-        >
-          <span>⚡</span>
-          <span>Pix Simulado</span>
-        </button>
-      </div>
-
-      <form id="form-pagamento-cartao" onsubmit="confirmarPagamentoTeste(event)" class="space-y-4">
-        <div class="p-3 rounded-xl bg-pastel-orange/15 border border-pastel-orange/30 text-[11px] text-charcoal-700 flex items-start gap-2">
-          <span class="text-pastel-orange-dark text-sm">ℹ️</span>
-          <span><strong>Modo de Teste:</strong> Digite qualquer número fictício (ex: <em>4444 4444 4444 4444</em>). Apenas validamos se os campos não estão vazios.</span>
-        </div>
-
-        <div>
-          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-bold mb-1" for="card-number">
-            Número do Cartão *
-          </label>
-          <input 
-            type="text" 
-            id="card-number" 
-            required 
-            placeholder="4444 4444 4444 4444" 
-            class="w-full bg-retro-subtle/50 border border-retro-border focus:border-pastel-blue focus:bg-white rounded-xl px-4 py-2.5 text-sm text-charcoal-800 font-mono focus:outline-none transition-colors"
-          />
-        </div>
-
-        <div>
-          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-bold mb-1" for="card-name">
-            Nome Impresso no Cartão *
-          </label>
-          <input 
-            type="text" 
-            id="card-name" 
-            required 
-            placeholder="Ex: NOME DO CLIENTE" 
-            class="w-full bg-retro-subtle/50 border border-retro-border focus:border-pastel-blue focus:bg-white rounded-xl px-4 py-2.5 text-sm text-charcoal-800 uppercase focus:outline-none transition-colors"
-          />
-        </div>
-
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-bold mb-1" for="card-expiry">
-              Validade (MM/AA) *
-            </label>
-            <input 
-              type="text" 
-              id="card-expiry" 
-              required 
-              placeholder="12/28" 
-              class="w-full bg-retro-subtle/50 border border-retro-border focus:border-pastel-blue focus:bg-white rounded-xl px-4 py-2.5 text-sm text-charcoal-800 font-mono focus:outline-none transition-colors"
-            />
-          </div>
-          <div>
-            <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-bold mb-1" for="card-cvv">
-              CVV *
-            </label>
-            <input 
-              type="text" 
-              id="card-cvv" 
-              required 
-              placeholder="123" 
-              maxlength="4" 
-              class="w-full bg-retro-subtle/50 border border-retro-border focus:border-pastel-blue focus:bg-white rounded-xl px-4 py-2.5 text-sm text-charcoal-800 font-mono focus:outline-none transition-colors"
-            />
-          </div>
-        </div>
-
-        <div class="pt-3">
-          <button 
-            type="submit" 
-            class="w-full py-4 bg-pastel-blue hover:bg-pastel-blue-hover text-white font-extrabold text-sm uppercase tracking-wider rounded-2xl shadow-md transition-transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
-          >
-            <span>✓</span>
-            <span>Confirmar Pagamento de Teste</span>
-          </button>
-        </div>
-      </form>
-
-      <div id="section-pagamento-pix" class="hidden space-y-4">
-        <div class="p-4 rounded-2xl bg-retro-subtle/50 border border-retro-border text-center space-y-3">
-          <div class="w-36 h-36 mx-auto bg-white p-2.5 rounded-2xl shadow-sm border border-retro-border flex items-center justify-center">
-            <svg class="w-full h-full text-charcoal-800" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm14 0h4v4h-4v-4zm-4-2h2v2h-2v-2zm4 4h2v2h-2v-2zm-6-2h2v4h-2v-4zm8-2h2v2h-2v-2zm-4 6h2v2h-2v-2z" />
-            </svg>
-          </div>
-          <div>
-            <p class="text-xs font-bold text-charcoal-800">QR Code Pix Simulado</p>
-            <p class="text-[11px] text-charcoal-500">Escaneie pelo app do banco ou use a chave abaixo</p>
-          </div>
-        </div>
-
-        <div class="p-3 bg-retro-subtle/50 border border-retro-border rounded-xl flex items-center justify-between text-xs">
-          <span class="font-mono text-charcoal-700 truncate mr-2">00020126580014br.gov.bcb.pix0136testenekopoke-bh-simulado</span>
-          <button 
-            type="button" 
-            onclick="navigator.clipboard.writeText('00020126580014br.gov.bcb.pix0136testenekopoke-bh-simulado'); mostrarToast('Chave Pix copiada com sucesso!');" 
-            class="shrink-0 text-pastel-blue hover:text-pastel-blue-dark hover:underline font-bold text-[11px]"
-          >
-            Copiar
-          </button>
-        </div>
-
-        <button 
-          type="button" 
-          onclick="confirmarPagamentoTeste()" 
-          class="w-full py-4 bg-pastel-blue hover:bg-pastel-blue-hover text-white font-extrabold text-sm uppercase tracking-wider rounded-2xl shadow-md transition-transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
-        >
-          <span>⚡</span>
-          <span>Confirmar Pagamento de Teste (Pix)</span>
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ==============================================
-       MODAL DE SUCESSO: PEDIDO FEITO! 🎉 (FADE-IN)
-  ============================================== -->
-  <div 
-    id="success-modal" 
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-800/55 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-500"
-  >
-    <div class="bg-retro-card border-2 border-pastel-orange/60 w-full max-w-lg rounded-3xl p-8 sm:p-10 shadow-2xl text-center relative transform scale-95 transition-all duration-300">
-      
-      <!-- Mascote Neko Poke com Efeito Festivo -->
-      <div class="relative w-24 h-24 mx-auto mb-6 rounded-3xl overflow-hidden border-2 border-pastel-orange shadow-md badge-pulse bg-white">
-        <img 
-          src="file:///C:/Users/aluno.dsi/.gemini/antigravity/brain/7bf6e4d2-ac40-4e4e-b723-305f5566d8a1/neko_poke_logo_1790792740236.jpg" 
-          alt="Neko Poke Mascote" 
-          class="w-full h-full object-cover"
-        />
-      </div>
-
-      <h3 class="text-3xl sm:text-4xl font-black font-display text-charcoal-800 tracking-tight mb-2">
-        Pedido Feito! 🎉
-      </h3>
-
-      <p class="text-base text-charcoal-600 font-medium mb-6 leading-relaxed">
-        O seu Poke já está a ser preparado pelos nossos sushimen!
-      </p>
-
-      <div class="bg-retro-subtle/50 rounded-2xl border border-retro-border p-5 text-left text-xs space-y-2.5 mb-8">
-        <div class="flex items-center justify-between pb-2 border-b border-retro-border">
-          <span class="text-charcoal-500">Status do Pagamento:</span>
-          <span class="bg-[#67A082]/20 text-[#3F755A] font-bold px-2.5 py-0.5 rounded-full border border-[#67A082]/30 flex items-center gap-1">
-            <span>✓</span> Pago via Modo Teste
-          </span>
-        </div>
-        <div class="flex items-center justify-between">
-          <span class="text-charcoal-500">Método Utilizado:</span>
-          <span class="text-charcoal-800 font-semibold" id="success-method">Cartão de Crédito</span>
-        </div>
-        <div class="flex items-center justify-between">
-          <span class="text-charcoal-500">Valor Total:</span>
-          <span class="text-charcoal-800 font-bold font-display text-base" id="success-total">R$ 0,00</span>
-        </div>
-        <div class="flex items-start justify-between pt-1">
-          <span class="text-charcoal-500 shrink-0 mr-2">Entrega para:</span>
-          <span class="text-charcoal-800 font-medium text-right truncate" id="success-address">Belo Horizonte, MG</span>
-        </div>
-      </div>
-
-      <div class="space-y-3">
-        <a 
-          id="btn-success-whatsapp" 
-          href="#" 
-          target="_blank" 
-          class="w-full py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-extrabold text-sm flex items-center justify-center gap-2.5 shadow-md transition-all transform hover:scale-[1.02] active:scale-95"
-        >
-          <span class="text-xl">📱</span>
-          <span>Ver Resumo no WhatsApp do Restaurante</span>
-        </a>
-
-        <button 
-          onclick="location.reload()" 
-          class="w-full py-3.5 px-6 rounded-2xl bg-retro-subtle hover:bg-retro-border text-charcoal hover:text-charcoal-800 font-bold text-xs uppercase tracking-wider transition-colors border border-retro-border font-retro"
-        >
-          Fechar e Voltar ao Início
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ==============================================
-       TOAST DE NOTIFICAÇÃO
-  ============================================== -->
-  <div 
-    id="toast-notification" 
-    class="fixed bottom-24 right-6 z-50 bg-retro-card border border-retro-border text-charcoal px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300"
-  >
-    <div class="w-7 h-7 rounded-full bg-pastel-blue/20 text-pastel-blue-dark flex items-center justify-center font-bold text-sm">
-      ✓
-    </div>
-    <div class="text-xs">
-      <p class="font-bold text-charcoal-800" id="toast-title">Prato adicionado!</p>
-      <p class="text-[10px] text-charcoal-400">Clique para abrir o carrinho</p>
-    </div>
-    <button onclick="abrirCarrinho()" class="text-xs font-bold text-pastel-blue hover:text-pastel-blue-dark hover:underline ml-2 font-retro tracking-wider">
-      Ver Carrinho →
-    </button>
-  </div>
-
-  <!-- ==============================================
-       SCRIPTS JAVASCRIPT
-  ============================================== -->
-  <script>
-    // Catálogo Oficial dos Pratos Prontos NEKO POKE
-    const PRODUTOS = {
-      1: {
-        id: 1,
-        nome: "Poke Neko Salmão Fresh",
-        preco: 54.90,
-        categoria: "pokes",
-        img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=300&auto=format&fit=crop"
-      },
-      2: {
-        id: 2,
-        nome: "Poke Tuna Spicy Wave",
-        preco: 56.90,
-        categoria: "pokes",
-        img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=300&auto=format&fit=crop"
-      },
-      3: {
-        id: 3,
-        nome: "Poke Green Neko (Shimeji)",
-        preco: 48.90,
-        categoria: "pokes",
-        img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=300&auto=format&fit=crop"
-      },
-      4: {
-        id: 4,
-        nome: "Combo Neko Sushi Box",
-        preco: 89.90,
-        categoria: "sushi",
-        img: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=300&auto=format&fit=crop"
-      },
-      5: {
-        id: 5,
-        nome: "Hot Roll Crocante Neko",
-        preco: 38.90,
-        categoria: "sushi",
-        img: "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?q=80&w=300&auto=format&fit=crop"
-      },
-      6: {
-        id: 6,
-        nome: "Suco Neko Tropical Wave",
-        preco: 14.90,
-        categoria: "bebidas",
-        img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=300&auto=format&fit=crop"
-      }
-    };
-
-    // Estado do Carrinho (com suporte a localStorage)
-    let carrinho = JSON.parse(localStorage.getItem('carrinho') || localStorage.getItem('mana_cart') || '[]');
-    let metodoPagamentoAtual = 'cartao';
-
-    /* ===================================================
-       ESTADO & LÓGICA DO "MONTE SEU POKE" INTERATIVO
-    =================================================== */
-    const monteSeuPokeState = {
-      base: "Arroz Japonês (Shari)",
-      proteinas: [],
-      molhos: [],
-      toppings: []
-    };
-
-    function selecionarBase(nomeBase) {
-      monteSeuPokeState.base = nomeBase;
-      atualizarUIMonteSeuPoke();
-    }
-
-    function alternarIngrediente(categoria, nomeItem, limiteMaximo) {
-      const lista = monteSeuPokeState[categoria];
-      const index = lista.indexOf(nomeItem);
-
-      if (index > -1) {
-        lista.splice(index, 1);
-      } else {
-        if (lista.length < limiteMaximo) {
-          lista.push(nomeItem);
-        } else {
-          mostrarToast(`Limite de ${limiteMaximo} ${limiteMaximo === 1 ? 'opção' : 'opções'} atingido em ${categoria}!`);
-          return;
-        }
-      }
-
-      atualizarUIMonteSeuPoke();
-    }
-
-    function atualizarUIMonteSeuPoke() {
-      const baseButtons = document.querySelectorAll('.poke-base-btn');
-      baseButtons.forEach(btn => {
-        const val = btn.getAttribute('data-base');
-        const checkIcon = btn.querySelector('.check-icon');
-        if (val === monteSeuPokeState.base) {
-          btn.classList.add('border-pastel-orange', 'bg-pastel-orange/20', 'text-charcoal-800', 'shadow-xs');
-          btn.classList.remove('border-retro-border', 'bg-retro-subtle/50', 'text-charcoal');
-          if (checkIcon) {
-            checkIcon.classList.add('bg-pastel-orange', 'border-pastel-orange', 'text-white');
-            checkIcon.classList.remove('text-transparent', 'border-charcoal-300');
-          }
-        } else {
-          btn.classList.remove('border-pastel-orange', 'bg-pastel-orange/20', 'text-charcoal-800', 'shadow-xs');
-          btn.classList.add('border-retro-border', 'bg-retro-subtle/50', 'text-charcoal');
-          if (checkIcon) {
-            checkIcon.classList.remove('bg-pastel-orange', 'border-pastel-orange', 'text-white');
-            checkIcon.classList.add('text-transparent', 'border-charcoal-300');
-          }
-        }
-      });
-
-      const itemButtons = document.querySelectorAll('.poke-item-btn');
-      itemButtons.forEach(btn => {
-        const itemVal = btn.getAttribute('data-item');
-        const checkIcon = btn.querySelector('.check-icon');
-
-        const isSelected = 
-          monteSeuPokeState.proteinas.includes(itemVal) ||
-          monteSeuPokeState.molhos.includes(itemVal) ||
-          monteSeuPokeState.toppings.includes(itemVal);
-
-        if (isSelected) {
-          btn.classList.add('border-pastel-orange', 'bg-pastel-orange/20', 'text-charcoal-800', 'shadow-xs');
-          btn.classList.remove('border-retro-border', 'bg-retro-subtle/50', 'text-charcoal');
-          if (checkIcon) {
-            checkIcon.classList.add('bg-pastel-orange', 'border-pastel-orange', 'text-white');
-            checkIcon.classList.remove('text-transparent', 'border-charcoal-300');
-          }
-        } else {
-          btn.classList.remove('border-pastel-orange', 'bg-pastel-orange/20', 'text-charcoal-800', 'shadow-xs');
-          btn.classList.add('border-retro-border', 'bg-retro-subtle/50', 'text-charcoal');
-          if (checkIcon) {
-            checkIcon.classList.remove('bg-pastel-orange', 'border-pastel-orange', 'text-white');
-            checkIcon.classList.add('text-transparent', 'border-charcoal-300');
-          }
-        }
-      });
-
-      document.getElementById('badge-count-base').textContent = "1/1 Selecionada";
-      document.getElementById('badge-count-proteinas').textContent = `Escolher até 2 (${monteSeuPokeState.proteinas.length}/2)`;
-      document.getElementById('badge-count-molhos').textContent = `Escolher até 2 (${monteSeuPokeState.molhos.length}/2)`;
-      document.getElementById('badge-count-toppings').textContent = `Escolher até 3 (${monteSeuPokeState.toppings.length}/3)`;
-
-      document.getElementById('summary-base').textContent = monteSeuPokeState.base;
-      
-      const elProt = document.getElementById('summary-proteinas');
-      if (monteSeuPokeState.proteinas.length > 0) {
-        elProt.textContent = monteSeuPokeState.proteinas.join(', ');
-        elProt.className = "text-charcoal-800 font-medium";
-      } else {
-        elProt.textContent = "Nenhuma selecionada (escolha até 2)";
-        elProt.className = "text-charcoal-400 font-medium";
-      }
-
-      const elMolhos = document.getElementById('summary-molhos');
-      if (monteSeuPokeState.molhos.length > 0) {
-        elMolhos.textContent = monteSeuPokeState.molhos.join(', ');
-        elMolhos.className = "text-charcoal-800 font-medium";
-      } else {
-        elMolhos.textContent = "Nenhum selecionado (escolha até 2)";
-        elMolhos.className = "text-charcoal-400 font-medium";
-      }
-
-      const elTop = document.getElementById('summary-toppings');
-      if (monteSeuPokeState.toppings.length > 0) {
-        elTop.textContent = monteSeuPokeState.toppings.join(', ');
-        elTop.className = "text-charcoal-800 font-medium";
-      } else {
-        elTop.textContent = "Nenhum selecionado (escolha até 3)";
-        elTop.className = "text-charcoal-400 font-medium";
-      }
-    }
-
-    function adicionarPokePersonalizadoAoCarrinho() {
-      if (monteSeuPokeState.proteinas.length === 0) {
-        alert("Por favor, selecione pelo menos 1 opção de proteína (até 2) para o seu poke!");
-        const sectionProt = document.getElementById('group-proteinas');
-        sectionProt.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        return;
-      }
-
-      const detalhesPartes = [
-        `Base: ${monteSeuPokeState.base}`,
-        `Proteínas: ${monteSeuPokeState.proteinas.join(', ')}`,
-        monteSeuPokeState.molhos.length > 0 ? `Molhos: ${monteSeuPokeState.molhos.join(', ')}` : null,
-        monteSeuPokeState.toppings.length > 0 ? `Toppings: ${monteSeuPokeState.toppings.join(', ')}` : null
-      ].filter(Boolean);
-
-      const detalhesFormatados = detalhesPartes.join(' • ');
-
-      const customId = 'poke-custom-' + Date.now();
-      const novoPoke = {
-        id: customId,
-        nome: "Poke Personalizado Neko",
-        detalhes: detalhesFormatados,
-        preco: 54.90,
-        img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=300&auto=format&fit=crop",
-        quantidade: 1
-      };
-
-      carrinho.push(novoPoke);
-      salvarCarrinhoNoStorage();
-      atualizarCarrinho();
-      mostrarToast("Poke personalizado adicionado ao carrinho!");
-      abrirCarrinho();
-    }
-
-    /* ===================================================
-       FUNÇÕES PRINCIPAIS DO CARRINHO
-    =================================================== */
-
-    function adicionarAoCarrinho(id) {
-      const produto = PRODUTOS[id];
-      if (!produto) return;
-
-      const itemExistente = carrinho.find(item => String(item.id) === String(id));
-
-      if (itemExistente) {
-        itemExistente.quantidade += 1;
-      } else {
-        carrinho.push({
-          id: produto.id,
-          nome: produto.nome,
-          detalhes: null,
-          preco: produto.preco,
-          img: produto.img,
-          quantidade: 1
-        });
-      }
-
-      salvarCarrinhoNoStorage();
-      atualizarCarrinho();
-      mostrarToast(`"${produto.nome}" adicionado!`);
-    }
-
-    function removerDoCarrinho(id) {
-      carrinho = carrinho.filter(item => String(item.id) !== String(id));
-      salvarCarrinhoNoStorage();
-      atualizarCarrinho();
-    }
-
-    function alterarQuantidade(id, delta) {
-      const item = carrinho.find(i => String(i.id) === String(id));
-      if (!item) return;
-
-      item.quantidade += delta;
-
-      if (item.quantidade <= 0) {
-        removerDoCarrinho(id);
-      } else {
-        salvarCarrinhoNoStorage();
-        atualizarCarrinho();
-      }
-    }
-
-    function salvarCarrinhoNoStorage() {
-      localStorage.setItem('carrinho', JSON.stringify(carrinho));
-      localStorage.setItem('mana_cart', JSON.stringify(carrinho));
-    }
-
-    function atualizarCarrinho() {
-      const container = document.getElementById('cart-items-container');
-      const badgeNav = document.getElementById('cart-badge');
-      const badgeMobile = document.getElementById('cart-badge-mobile');
-      const badgeFloating = document.getElementById('floating-cart-badge');
-      const totalFloating = document.getElementById('floating-cart-total');
-      const countText = document.getElementById('cart-item-count-text');
-      const subtotalEl = document.getElementById('cart-subtotal');
-      const totalPriceEl = document.getElementById('cart-total-price');
-
-      const totalItens = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
-      const valorTotal = carrinho.reduce((acc, item) => acc + (item.preco * item.quantidade), 0);
-
-      badgeNav.textContent = totalItens;
-      if (badgeMobile) badgeMobile.textContent = totalItens;
-      badgeFloating.textContent = totalItens;
-      countText.textContent = `${totalItens} ${totalItens === 1 ? 'item adicionado' : 'itens adicionados'}`;
-
-      const valorFormatado = valorTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-      subtotalEl.textContent = valorFormatado;
-      totalPriceEl.textContent = valorFormatado;
-      totalFloating.textContent = valorFormatado;
-
-      if (carrinho.length === 0) {
-        container.innerHTML = `
-          <div class="h-full flex flex-col items-center justify-center text-center py-12 text-charcoal-400">
-            <div class="w-20 h-20 rounded-full bg-retro-subtle flex items-center justify-center text-3xl mb-4 border border-retro-border">
-              🥡
-            </div>
-            <h4 class="text-base font-bold text-charcoal-800 mb-1">Seu carrinho está vazio</h4>
-            <p class="text-xs text-charcoal-500 max-w-xs mb-6">
-              Que tal montar um poke fresquinho ou pedir um combo especial para hoje?
-            </p>
-            <a href="#monte-seu-poke" onclick="fecharCarrinho()" class="px-6 py-2.5 rounded-full bg-pastel-blue hover:bg-pastel-blue-hover text-white text-xs font-bold uppercase tracking-wider font-retro shadow-xs">
-              Montar Poke Personalizado
-            </a>
-          </div>
-        `;
-        return;
-      }
-
-      container.innerHTML = carrinho.map(item => {
-        const itemTotal = (item.preco * item.quantidade).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-        const unitPrice = item.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-
-        return `
-          <div class="bg-retro-subtle/50 p-4 rounded-2xl border border-retro-border flex flex-col gap-3 group hover:border-pastel-blue transition-colors">
-            <div class="flex items-start gap-3.5">
-              <img src="${item.img}" alt="${item.nome}" class="w-16 h-16 rounded-xl object-cover shrink-0 bg-retro-card border border-retro-border" />
-              
-              <div class="flex-grow min-w-0">
-                <div class="flex justify-between items-start">
-                  <h4 class="text-sm font-bold text-charcoal-800 truncate font-display">${item.nome}</h4>
-                  <button 
-                    onclick="removerDoCarrinho('${item.id}')" 
-                    class="text-charcoal-400 hover:text-[#D46961] text-xs transition-colors p-1"
-                    title="Remover Item"
-                  >
-                    🗑️
-                  </button>
-                </div>
-                <p class="text-xs text-charcoal-500">${unitPrice} unid.</p>
-              </div>
-            </div>
-
-            ${item.detalhes ? `
-              <div class="text-[11px] text-charcoal-600 leading-snug bg-retro-card p-2.5 rounded-xl border border-retro-border">
-                ${item.detalhes}
-              </div>
-            ` : ''}
-
-            <div class="flex items-center justify-between pt-2 border-t border-retro-border/60">
-              <div class="flex items-center gap-2">
-                <button 
-                  onclick="alterarQuantidade('${item.id}', -1)" 
-                  class="w-6 h-6 rounded-lg bg-retro-card border border-retro-border hover:bg-pastel-blue hover:text-white text-charcoal flex items-center justify-center font-bold text-xs transition-colors"
-                  title="Diminuir"
-                >
-                  -
-                </button>
-                <span class="text-xs font-bold text-charcoal-800 px-1.5">${item.quantidade}</span>
-                <button 
-                  onclick="alterarQuantidade('${item.id}', 1)" 
-                  class="w-6 h-6 rounded-lg bg-retro-card border border-retro-border hover:bg-pastel-blue hover:text-white text-charcoal flex items-center justify-center font-bold text-xs transition-colors"
-                  title="Aumentar"
-                >
-                  +
-                </button>
-              </div>
-              <span class="text-sm font-extrabold text-charcoal-800 font-display">${itemTotal}</span>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    function abrirCarrinho() {
-      const drawer = document.getElementById('cart-drawer');
-      const backdrop = document.getElementById('cart-backdrop');
-
-      backdrop.classList.remove('opacity-0', 'pointer-events-none');
-      backdrop.classList.add('opacity-100');
-
-      drawer.classList.remove('translate-x-full');
-      drawer.classList.add('translate-x-0');
-
-      document.body.classList.add('overflow-hidden');
-      atualizarUsuarioNoCarrinho();
-    }
-
-    function fecharCarrinho() {
-      const drawer = document.getElementById('cart-drawer');
-      const backdrop = document.getElementById('cart-backdrop');
-
-      backdrop.classList.remove('opacity-100');
-      backdrop.classList.add('opacity-0', 'pointer-events-none');
-
-      drawer.classList.remove('translate-x-0');
-      drawer.classList.add('translate-x-full');
-
-      document.body.classList.remove('overflow-hidden');
-    }
-
-    /* ---------------------------------------------
-       MODAL DE USUÁRIO / CADASTRO (LOCALSTORAGE)
-    ---------------------------------------------- */
-    function abrirModalUsuario() {
-      const modal = document.getElementById('user-modal');
-      const dados = obterDadosUsuario();
-
-      if (dados) {
-        document.getElementById('input-nome').value = dados.nome || '';
-        document.getElementById('input-telefone').value = dados.telefone || '';
-        document.getElementById('input-morada').value = dados.morada || '';
-        document.getElementById('input-referencia').value = dados.referencia || '';
-      }
-
-      modal.classList.remove('opacity-0', 'pointer-events-none');
-      modal.classList.add('opacity-100');
-      modal.querySelector('div').classList.remove('scale-95');
-      modal.querySelector('div').classList.add('scale-100');
-    }
-
-    function fecharModalUsuario() {
-      const modal = document.getElementById('user-modal');
-      modal.classList.remove('opacity-100');
-      modal.classList.add('opacity-0', 'pointer-events-none');
-      modal.querySelector('div').classList.remove('scale-100');
-      modal.querySelector('div').classList.add('scale-95');
-    }
-
-    function salvarDadosUsuario(event) {
-      event.preventDefault();
-
-      const nome = document.getElementById('input-nome').value.trim();
-      const telefone = document.getElementById('input-telefone').value.trim();
-      const morada = document.getElementById('input-morada').value.trim();
-      const referencia = document.getElementById('input-referencia').value.trim();
-
-      const usuario = { nome, telefone, morada, referencia };
-      localStorage.setItem('mana_user', JSON.stringify(usuario));
-
-      fecharModalUsuario();
-      atualizarUIUsuario();
-      atualizarUsuarioNoCarrinho();
-      mostrarToast(`Olá, ${nome.split(' ')[0]}! Dados salvos.`);
-    }
-
-    function obterDadosUsuario() {
-      const data = localStorage.getItem('mana_user');
-      return data ? JSON.parse(data) : null;
-    }
-
-    function atualizarUIUsuario() {
-      const usuario = obterDadosUsuario();
-      const label = document.getElementById('nav-user-label');
-      if (usuario && usuario.nome) {
-        const primeiroNome = usuario.nome.split(' ')[0];
-        label.textContent = `Olá, ${primeiroNome}`;
-      } else {
-        label.textContent = `Entrar / Cadastrar`;
-      }
-    }
-
-    function atualizarUsuarioNoCarrinho() {
-      const usuario = obterDadosUsuario();
-      const nameEl = document.getElementById('cart-user-name');
-      const addressEl = document.getElementById('cart-user-address');
-
-      if (usuario && usuario.nome && usuario.morada) {
-        nameEl.textContent = `Entregar para: ${usuario.nome}`;
-        addressEl.textContent = `${usuario.morada}`;
-      } else {
-        nameEl.textContent = "Sem endereço de entrega";
-        addressEl.textContent = "Clique para preencher seus dados";
-      }
-    }
-
-    /* ===================================================
-       FLUXO DE PAGAMENTO & CHECKOUT (SIMULADO)
-    =================================================== */
-
-    function iniciarCheckout() {
-      if (carrinho.length === 0) {
-        alert("O seu carrinho está vazio! Por favor adicione itens antes de finalizar.");
-        return;
-      }
-
-      const usuario = obterDadosUsuario();
-      if (!usuario || !usuario.nome || !usuario.morada || !usuario.telefone) {
-        alert("Por favor, preencha os seus dados de entrega (Nome, Telefone e Morada) antes de prosseguir com o pagamento!");
-        fecharCarrinho();
-        abrirModalUsuario();
-        return;
-      }
-
-      fecharCarrinho();
-      abrirModalPagamento();
-    }
-
-    function abrirModalPagamento() {
-      const modal = document.getElementById('payment-modal');
-      const valorTotal = carrinho.reduce((acc, item) => acc + (item.preco * item.quantidade), 0);
-      const totalFormatado = valorTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-
-      document.getElementById('payment-modal-total').textContent = totalFormatado;
-
-      modal.classList.remove('opacity-0', 'pointer-events-none');
-      modal.classList.add('opacity-100');
-      modal.querySelector('div').classList.remove('scale-95');
-      modal.querySelector('div').classList.add('scale-100');
-    }
-
-    function fecharModalPagamento() {
-      const modal = document.getElementById('payment-modal');
-      modal.classList.remove('opacity-100');
-      modal.classList.add('opacity-0', 'pointer-events-none');
-      modal.querySelector('div').classList.remove('scale-100');
-      modal.querySelector('div').classList.add('scale-95');
-    }
-
-    function selecionarMetodoPagamento(metodo) {
-      metodoPagamentoAtual = metodo;
-      const btnCard = document.getElementById('tab-btn-card');
-      const btnPix = document.getElementById('tab-btn-pix');
-      const formCard = document.getElementById('form-pagamento-cartao');
-      const sectionPix = document.getElementById('section-pagamento-pix');
-
-      if (metodo === 'cartao') {
-        btnCard.className = "flex items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider border transition-all bg-pastel-orange text-white border-pastel-orange shadow-xs font-retro";
-        btnPix.className = "flex items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider border transition-all bg-retro-subtle/50 text-charcoal border-retro-border hover:border-pastel-blue hover:text-charcoal-800 font-retro";
-        formCard.classList.remove('hidden');
-        sectionPix.classList.add('hidden');
-      } else {
-        btnPix.className = "flex items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider border transition-all bg-pastel-orange text-white border-pastel-orange shadow-xs font-retro";
-        btnCard.className = "flex items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider border transition-all bg-retro-subtle/50 text-charcoal border-retro-border hover:border-pastel-blue hover:text-charcoal-800 font-retro";
-        formCard.classList.add('hidden');
-        sectionPix.classList.remove('hidden');
-      }
-    }
-
-    function confirmarPagamentoTeste(event) {
-      if (event) event.preventDefault();
-
-      if (metodoPagamentoAtual === 'cartao') {
-        const num = document.getElementById('card-number').value.trim();
-        const nome = document.getElementById('card-name').value.trim();
-        const exp = document.getElementById('card-expiry').value.trim();
-        const cvv = document.getElementById('card-cvv').value.trim();
-
-        if (!num || !nome || !exp || !cvv) {
-          alert("Por favor, preencha todos os campos do cartão fictício para continuar no Modo Teste.");
-          return;
-        }
-      }
-
-      const usuario = obterDadosUsuario() || { nome: "Cliente", morada: "Belo Horizonte, MG", telefone: "Não informado" };
-
-      let listaItensWhatsApp = "";
-      let totalGeral = 0;
-
-      carrinho.forEach(item => {
-        const subtotal = item.preco * item.quantidade;
-        totalGeral += subtotal;
-        if (item.detalhes) {
-          listaItensWhatsApp += `• ${item.quantidade}x *${item.nome}* - R$ ${subtotal.toFixed(2).replace('.', ',')}\n   └ _${item.detalhes}_\n`;
-        } else {
-          listaItensWhatsApp += `• ${item.quantidade}x *${item.nome}* - R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
-        }
-      });
-
-      const totalFormatado = totalGeral.toFixed(2).replace('.', ',');
-      const metodoNome = metodoPagamentoAtual === 'cartao' ? 'Cartão de Crédito (Modo Teste)' : 'Pix Simulado';
-
-      const mensagemWhatsApp = 
-`*NOVO PEDIDO - NEKO POKE & IZAKAYA* 🐱🍣
-----------------------------------------
-✅ *STATUS:* PAGO VIA MODO TESTE
-💳 *FORMA DE PAGAMENTO:* ${metodoNome}
-----------------------------------------
-*DADOS DO CLIENTE:*
-👤 *Cliente:* ${usuario.nome}
-📱 *Telefone:* ${usuario.telefone}
-📍 *Endereço:* ${usuario.morada}
-${usuario.referencia ? `🏷️ *Ref:* ${usuario.referencia}\n` : ''}----------------------------------------
-*ITENS DO PEDIDO:*
-${listaItensWhatsApp}----------------------------------------
-🛵 *Taxa de Entrega:* GRÁTIS
-💰 *VALOR TOTAL PAGO:* R$ ${totalFormatado}
-----------------------------------------
-_Pedido confirmado pelo site oficial. Já estamos preparando!_`;
-
-      const numeroRestaurante = "5531999999999";
-      const urlWhatsApp = `https://wa.me/${numeroRestaurante}?text=${encodeURIComponent(mensagemWhatsApp)}`;
-
-      localStorage.removeItem('carrinho');
-      localStorage.removeItem('mana_cart');
-      carrinho = [];
-      atualizarCarrinho();
-
-      fecharModalPagamento();
-      window.open(urlWhatsApp, '_blank');
-
-      exibirTelaSucesso({
-        metodo: metodoNome,
-        total: `R$ ${totalFormatado}`,
-        morada: usuario.morada,
-        urlWhatsApp: urlWhatsApp
-      });
-    }
-
-    function exibirTelaSucesso(dados) {
-      const modal = document.getElementById('success-modal');
-      document.getElementById('success-method').textContent = dados.metodo;
-      document.getElementById('success-total').textContent = dados.total;
-      document.getElementById('success-address').textContent = dados.morada;
-      document.getElementById('btn-success-whatsapp').href = dados.urlWhatsApp;
-
-      modal.classList.remove('opacity-0', 'pointer-events-none');
-      modal.classList.add('opacity-100');
-      
-      const modalContent = modal.querySelector('div');
-      modalContent.classList.remove('scale-95');
-      modalContent.classList.add('scale-100', 'animate-modal-fade');
-    }
-
-    /* ---------------------------------------------
-       TOAST FEEDBACK
-    ---------------------------------------------- */
-    let toastTimeout;
-    function mostrarToast(mensagem) {
-      const toast = document.getElementById('toast-notification');
-      const title = document.getElementById('toast-title');
-      title.textContent = mensagem;
-
-      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
-      toast.classList.add('translate-y-0', 'opacity-100');
-
-      clearTimeout(toastTimeout);
-      toastTimeout = setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100');
-        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
-      }, 3500);
-    }
-
-    /* ---------------------------------------------
-       INICIALIZAÇÃO & EVENT LISTENERS
-    ---------------------------------------------- */
-    document.addEventListener('DOMContentLoaded', () => {
-      atualizarCarrinho();
-      atualizarUIUsuario();
-      atualizarUIMonteSeuPoke();
-
-      // Menu Mobile
-      const toggleBtn = document.getElementById('mobile-toggle');
-      const mobileNav = document.getElementById('mobile-nav');
-      const mobileItems = document.querySelectorAll('.mobile-item');
-
-      if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-          mobileNav.classList.toggle('hidden');
-        });
-      }
-
-      mobileItems.forEach(item => {
-        item.addEventListener('click', () => {
-          mobileNav.classList.add('hidden');
-        });
-      });
-
-      // Filtros de Categoria (Abas Ativas com Pastel Orange)
-      const filterButtons = document.querySelectorAll('.filter-btn');
-      const menuCards = document.querySelectorAll('.menu-card');
-
-      filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          filterButtons.forEach(b => {
-            b.classList.remove('bg-pastel-orange', 'text-white', 'shadow-xs');
-            b.classList.add('bg-retro-card', 'border', 'border-retro-border', 'text-charcoal');
-          });
-
-          btn.classList.add('bg-pastel-orange', 'text-white', 'shadow-xs');
-          btn.classList.remove('bg-retro-card', 'border', 'border-retro-border', 'text-charcoal');
-
-          const filter = btn.getAttribute('data-filter');
-
-          menuCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
-              card.style.display = 'flex';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
-      });
-    });
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
-
-    function fecharMenuMobile() {
-      if (mobileNav) {
-        mobileNav.classList.add('hidden');
-      }
-      if (mobileToggle) {
-        mobileToggle.setAttribute('aria-expanded', 'false');
-      }
-    }
-
-    if (mobileToggle && mobileNav) {
-      mobileToggle.addEventListener('click', () => {
-        const isHidden = mobileNav.classList.contains('hidden');
-        mobileNav.classList.toggle('hidden', !isHidden);
-        mobileToggle.setAttribute('aria-expanded', String(isHidden));
-      });
-
-      mobileNav.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => fecharMenuMobile());
-      });
-    }
-
-    window.abrirModalUsuario = function () {
-      console.log('Abrir modal do usuário');
-      alert('Modal do usuário');
-    };
-
-    window.abrirCarrinho = function () {
-      console.log('Abrir carrinho');
-      alert('Carrinho aberto');
-    };
-
-    window.selecionarBase = function (base) {
-      console.log('Base selecionada:', base);
-    };
-
-    window.alternarIngrediente = function (grupo, item, max) {
-      console.log('Grupo:', grupo, 'Item:', item, 'Máximo:', max);
-    };
-
-    window.adicionarPokePersonalizadoAoCarrinho = function () {
-      console.log('Adicionar poke personalizado ao carrinho');
-      alert('Poke adicionado ao carrinho');
-    };
-
-    window.adicionarAoCarrinho = function (id) {
-      console.log('Adicionar item do cardápio:', id);
-      alert('Item ' + id + ' adicionado ao carrinho');
-    };
-
-    document.querySelectorAll('.filter-btn').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach((b) => {
-          b.classList.remove('active', 'bg-pastel-orange', 'text-white');
-          b.classList.add('bg-retro-card', 'border', 'border-retro-border', 'text-charcoal');
-        });
-
-        btn.classList.add('active', 'bg-pastel-orange', 'text-white');
-        btn.classList.remove('bg-retro-card', 'border', 'border-retro-border', 'text-charcoal');
-      });
-    });
-  });
-</script>
-
-    
-
-  </script>
+  <script defer src="script.js"></script>
 </body>
 </html>
