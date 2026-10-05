@@ -2501,7 +2501,73 @@ _Pedido confirmado pelo site oficial. Já estamos preparando!_`;
         });
       });
     });
-  
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    function fecharMenuMobile() {
+      if (mobileNav) {
+        mobileNav.classList.add('hidden');
+      }
+      if (mobileToggle) {
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    if (mobileToggle && mobileNav) {
+      mobileToggle.addEventListener('click', () => {
+        const isHidden = mobileNav.classList.contains('hidden');
+        mobileNav.classList.toggle('hidden', !isHidden);
+        mobileToggle.setAttribute('aria-expanded', String(isHidden));
+      });
+
+      mobileNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => fecharMenuMobile());
+      });
+    }
+
+    window.abrirModalUsuario = function () {
+      console.log('Abrir modal do usuário');
+      alert('Modal do usuário');
+    };
+
+    window.abrirCarrinho = function () {
+      console.log('Abrir carrinho');
+      alert('Carrinho aberto');
+    };
+
+    window.selecionarBase = function (base) {
+      console.log('Base selecionada:', base);
+    };
+
+    window.alternarIngrediente = function (grupo, item, max) {
+      console.log('Grupo:', grupo, 'Item:', item, 'Máximo:', max);
+    };
+
+    window.adicionarPokePersonalizadoAoCarrinho = function () {
+      console.log('Adicionar poke personalizado ao carrinho');
+      alert('Poke adicionado ao carrinho');
+    };
+
+    window.adicionarAoCarrinho = function (id) {
+      console.log('Adicionar item do cardápio:', id);
+      alert('Item ' + id + ' adicionado ao carrinho');
+    };
+
+    document.querySelectorAll('.filter-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach((b) => {
+          b.classList.remove('active', 'bg-pastel-orange', 'text-white');
+          b.classList.add('bg-retro-card', 'border', 'border-retro-border', 'text-charcoal');
+        });
+
+        btn.classList.add('active', 'bg-pastel-orange', 'text-white');
+        btn.classList.remove('bg-retro-card', 'border', 'border-retro-border', 'text-charcoal');
+      });
+    });
+  });
+</script>
 
     
 
